@@ -2,6 +2,7 @@ let g:python_host_prog = '/usr/bin/python'  " here if python --version show 3.0+
 let g:python3_host_prog = '/Library/Frameworks/Python.framework/Versions/3.7/bin/python3'
 
 set number
+set encoding=UTF-8
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
@@ -90,6 +91,7 @@ call plug#begin('~/.config/plugin')
   Plug 'mattesgroeger/vim-bookmarks'
   " 启动页
   Plug 'mhinz/vim-startify'
+  " file-icons
 call plug#end()
 
 " if NerdTree {
@@ -150,17 +152,17 @@ let g:yats_host_keyword = 1
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
-let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
-      \ --ignore .git
-      \ --ignore node_modules
-      \ --ignore .svn
-      \ --ignore .hg
-      \ --ignore .DS_Store
-      \ --ignore "**/*.pyc"
-      \ --ignore "**/*.swp"
-      \ --ignore "**/*.swo"
-      \ -g ""'
-"}
+"let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
+"      \ --ignore .git
+"      \ --ignore node_modules
+"      \ --ignore .svn
+"      \ --ignore .hg
+"      \ --ignore .DS_Store
+"      \ --ignore "**/*.pyc"
+"      \ --ignore "**/*.swp"
+"      \ --ignore "**/*.swo"
+"      \ -g ""'
+""}
 
 "if Tagbar {
   nnoremap <silent> <leader>tt :TagbarToggle<CR>
