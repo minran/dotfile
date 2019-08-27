@@ -77,7 +77,7 @@ call plug#begin('~/.config/plugin')
   Plug 'majutsushi/tagbar'
   " NerdTree
   Plug 'scrooloose/nerdtree'
-  Plug 'ryanoasis/vim-devicons'
+  "Plug 'ryanoasis/vim-devicons'
   " airline
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
