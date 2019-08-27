@@ -63,7 +63,7 @@ call plug#begin('~/.config/plugin')
   " 代码自动补全插件
   "Plug 'zxqfl/tabnine-vim'
   "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-  " 全局搜索插件 Ack
+  " 全局搜索插件 Ack'
   Plug 'wincent/ferret'
   " Typescript 高亮插件
   Plug 'leafgarland/typescript-vim'
@@ -100,7 +100,10 @@ call plug#end()
   nmap <leader>nt :NERDTreeFind<CR>
   let g:NERDTreeDirArrowExpandable = '▸'
   let g:NERDTreeDirArrowCollapsible = '▾'
-"}
+  " 显示隐藏文件
+  let NERDTreeShowHidden=1
+  " 显示书签列表
+  let NERDTreeShowBookmarks=1
 
 " if airline {
   let g:airline_theme='molokai'
