@@ -92,7 +92,10 @@ call plug#begin('~/.config/plugin')
   Plug 'mattesgroeger/vim-bookmarks'
   " 启动页
   Plug 'mhinz/vim-startify'
-  " file-icons
+  " git
+  Plug 'tpope/vim-fugitive'
+  Plug 'junegunn/gv.vim'
+  Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 " if NerdTree {
