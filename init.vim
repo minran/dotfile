@@ -90,6 +90,12 @@ call plug#begin('~/.config/plugin')
   Plug 'airblade/vim-gitgutter'
 call plug#end()
 
+" Ack 快捷键
+" Instead of <leader>a, use <leader>x.
+nmap <leader>x <Plug>(FerretAck)
+" Instead of <leader>s, use <leader>z.
+nmap <leader>z <Plug>(FerretAckWord)
+
 " if NerdTree {
   map <C-e> :NERDTreeToggle<CR>
   map <leader>e :NERDTreeFind<CR>
@@ -342,6 +348,5 @@ au BufWritePost .vimrc source $MYVIMRC | AirlineRefresh
   " Resume latest coc list
   nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 " }
-
 autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
 
