@@ -56,33 +56,25 @@ let g:netrw_winsize = 25
   " 标签页切换
   map <S-H> gT
   map <S-L> gt
+  nmap <leader>v "+gp
+  nmap <leader>c "+y
 "}
 
 call plug#begin('~/.config/plugin')
   Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
-  " 代码自动补全插件
-  "Plug 'zxqfl/tabnine-vim'
-  "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-  " 全局搜索插件 Ack'
+    " 全局搜索插件 Ack'
   Plug 'wincent/ferret'
   " Typescript 高亮插件
   Plug 'leafgarland/typescript-vim'
   Plug 'HerringtonDarkholme/yats.vim'
-  "Plug 'autozimu/LanguageClient-neovim', {
-  "  \ 'branch': 'next',
-  "  \ 'do': 'bash install.sh',
-  "  \ }
-  " (Optional) Multi-entry selection UI.
   Plug 'junegunn/fzf'
   Plug 'majutsushi/tagbar'
   " NerdTree
   Plug 'scrooloose/nerdtree'
-  "Plug 'ryanoasis/vim-devicons'
   " airline
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
   " if jsx or React
-  "Plug 'mxw/vim-jsx'
   Plug 'sheerun/vim-polyglot'
   " neovim 快速跳转插件
   Plug 'Lokaltog/vim-easymotion'
