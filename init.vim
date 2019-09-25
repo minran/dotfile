@@ -88,6 +88,8 @@ call plug#begin('~/.config/plugin')
   Plug 'tpope/vim-fugitive'
   Plug 'junegunn/gv.vim'
   Plug 'airblade/vim-gitgutter'
+  " 改变包围结构
+  Plug 'anyakichi/vim-surround'
 call plug#end()
 
 " Ack 快捷键
