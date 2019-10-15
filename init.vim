@@ -35,7 +35,8 @@ set showmatch
 set cursorline              " 高亮当前行
 
 set termguicolors
-colorscheme janah
+"colorscheme janah
+colorscheme monokai
 
 " tree
 let g:netrw_liststyle = 3
@@ -90,6 +91,7 @@ call plug#begin('~/.config/plugin')
   Plug 'airblade/vim-gitgutter'
   " 改变包围结构
   Plug 'anyakichi/vim-surround'
+  Plug 'scrooloose/nerdcommenter'
 call plug#end()
 
 " Ack 快捷键
