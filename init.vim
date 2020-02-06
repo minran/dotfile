@@ -35,8 +35,8 @@ set showmatch
 set cursorline              " 高亮当前行
 
 set termguicolors
-"colorscheme janah
-colorscheme monokai
+colorscheme janah
+"colorscheme monokai
 
 " tree
 let g:netrw_liststyle = 3
@@ -72,6 +72,8 @@ call plug#begin('~/.config/plugin')
   Plug 'majutsushi/tagbar'
   " NerdTree
   Plug 'scrooloose/nerdtree'
+  Plug 'ryanoasis/vim-devicons'
+
   " airline
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
