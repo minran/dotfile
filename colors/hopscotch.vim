@@ -1,5 +1,3 @@
-" Hopscotch by Jan T. Sott | https://github.com/idleberg/Hopscotch
-
 set background=dark
 
 " This enables the coresponding base16-shell script to run so that
