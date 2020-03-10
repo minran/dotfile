@@ -35,7 +35,7 @@ set showmatch
 set cursorline              " 高亮当前行
 
 set termguicolors
-colorscheme janah
+colorscheme hopscotch
 "colorscheme monokai
 
 " tree
@@ -62,7 +62,7 @@ let g:netrw_winsize = 25
 "}
 
 call plug#begin('~/.config/plugin')
-  Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
     " 全局搜索插件 Ack'
   Plug 'wincent/ferret'
   " Typescript 高亮插件
