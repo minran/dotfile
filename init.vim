@@ -38,8 +38,8 @@ set cursorline              " 高亮当前行
 
 set termguicolors
 "colorscheme janah
-colorscheme hopscotch
-"colorscheme monokai
+"colorscheme hopscotch
+colorscheme monokai
 
 " tree
 let g:netrw_liststyle = 3
