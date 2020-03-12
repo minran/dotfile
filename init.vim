@@ -10,6 +10,8 @@ set autoindent
 " 默认选择第一个提示
 set completeopt=menu,noinsert
 
+set autoread " 自动加载选项
+
 set expandtab
 " if macunix{
   "开始折叠
@@ -35,6 +37,7 @@ set showmatch
 set cursorline              " 高亮当前行
 
 set termguicolors
+"colorscheme janah
 colorscheme hopscotch
 "colorscheme monokai
 
@@ -53,7 +56,8 @@ let g:netrw_winsize = 25
   map <C-J> <C-W>j
   map <C-K> <C-W>k
   map <C-L> <C-W>l
-  map <C-H> <C-W>h
+"  map <C-H> <C-W>h
+  
   " 标签页切换
   map <S-H> gT
   map <S-L> gt
@@ -77,6 +81,8 @@ call plug#begin('~/.config/plugin')
   " airline
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
+  Plug 'bling/vim-bufferline'
+
   " if jsx or React
   Plug 'sheerun/vim-polyglot'
   " neovim 快速跳转插件
@@ -94,6 +100,8 @@ call plug#begin('~/.config/plugin')
   " 改变包围结构
   Plug 'anyakichi/vim-surround'
   Plug 'scrooloose/nerdcommenter'
+  Plug 'jparise/vim-graphql'
+  Plug 'wakatime/vim-wakatime'
 call plug#end()
 
 " Ack 快捷键
