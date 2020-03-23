@@ -101,7 +101,6 @@ call plug#begin('~/.config/plugin')
   Plug 'anyakichi/vim-surround'
   Plug 'scrooloose/nerdcommenter'
   Plug 'jparise/vim-graphql'
-  Plug 'wakatime/vim-wakatime'
 call plug#end()
 
 " Ack 快捷键
