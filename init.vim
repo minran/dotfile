@@ -10,8 +10,6 @@ set autoindent
 " 默认选择第一个提示
 set completeopt=menu,noinsert
 
-set autoread " 自动加载选项
-
 set expandtab
 " if macunix{
   "开始折叠
@@ -31,15 +29,14 @@ set expandtab
 " }
 
 set ruler                   " 打开状态栏标尺
-syntax on                   " 自动语法高亮
+syntax enable               " 自动语法高亮
 set hlsearch                " 搜索时高亮显示被找到的文本
 set showmatch
 set cursorline              " 高亮当前行
 
 set termguicolors
-"colorscheme janah
-"colorscheme hopscotch
-colorscheme monokai
+"colorscheme space_vim_theme
+colorscheme molokai
 
 " tree
 let g:netrw_liststyle = 3
@@ -56,8 +53,7 @@ let g:netrw_winsize = 25
   map <C-J> <C-W>j
   map <C-K> <C-W>k
   map <C-L> <C-W>l
-"  map <C-H> <C-W>h
-  
+  map <C-H> <C-W>h
   " 标签页切换
   map <S-H> gT
   map <S-L> gt
@@ -66,6 +62,8 @@ let g:netrw_winsize = 25
 "}
 
 call plug#begin('~/.config/plugin')
+  Plug 'maksimr/vim-jsbeautify'
+
   Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
     " 全局搜索插件 Ack'
   Plug 'wincent/ferret'
@@ -76,13 +74,9 @@ call plug#begin('~/.config/plugin')
   Plug 'majutsushi/tagbar'
   " NerdTree
   Plug 'scrooloose/nerdtree'
-  Plug 'ryanoasis/vim-devicons'
-
   " airline
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
-  Plug 'bling/vim-bufferline'
-
   " if jsx or React
   Plug 'sheerun/vim-polyglot'
   " neovim 快速跳转插件
@@ -100,8 +94,6 @@ call plug#begin('~/.config/plugin')
   " 改变包围结构
   Plug 'anyakichi/vim-surround'
   Plug 'scrooloose/nerdcommenter'
-  Plug 'jparise/vim-graphql'
-  Plug 'wakatime/vim-wakatime'
 call plug#end()
 
 " Ack 快捷键
@@ -221,6 +213,19 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
   \ }
 "}
 
+"if jsbeautify {
+map <c-f> :call JsBeautify()<cr>
+" or
+autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
+" for json
+autocmd FileType json noremap <buffer> <c-f> :call JsonBeautify()<cr>
+" for jsx
+autocmd FileType jsx noremap <buffer> <c-f> :call JsxBeautify()<cr>
+" for html
+autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+" for css or scss
+autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
+"
 set hidden
 "autocmd BufNewFile,BufRead *.ts set filetype=typescript
 "au BufNewFile,BufRead *.tsx set filetype=typescript
@@ -363,4 +368,3 @@ au BufWritePost .vimrc source $MYVIMRC | AirlineRefresh
   nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 " }
 autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
-
