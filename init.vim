@@ -6,7 +6,9 @@ set encoding=UTF-8
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
-set autoindent
+set autoindent "自动缩进
+set copyindent "复制保持原来的缩进
+set smartindent
 " 默认选择第一个提示
 set completeopt=menu,noinsert
 
@@ -35,6 +37,11 @@ syntax on                   " 自动语法高亮
 set hlsearch                " 搜索时高亮显示被找到的文本
 set showmatch
 set cursorline              " 高亮当前行
+set nobackup 		            " 不创建备份文件			
+set infercase               " 区分大小写
+
+
+
 
 set termguicolors
 "colorscheme janah
