@@ -43,7 +43,8 @@ set infercase               " 区分大小写
 
 set termguicolors
 "colorscheme space_vim_theme
-colorscheme molokai
+"colorscheme molokai
+colorscheme janah
 
 " tree
 let g:netrw_liststyle = 3
@@ -69,7 +70,8 @@ let g:netrw_winsize = 25
 "}
 
 call plug#begin('~/.config/plugin')
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+  Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
   " 全局搜索插件 Ack'
   Plug 'wincent/ferret'
   " Typescript 高亮插件
@@ -312,7 +314,7 @@ au BufWritePost .vimrc source $MYVIMRC | AirlineRefresh
   endfunction
 
   " Highlight symbol under cursor on CursorHold
-  autocmd CursorHold * silent call CocActionAsync('highlight')
+  " autocmd CursorHold * silent call CocActionAsync('highlight')
 
   " Remap for rename current word
   nmap <leader>rn <Plug>(coc-rename)
