@@ -1,7 +1,7 @@
 let g:python_host_prog = '/usr/bin/python'  " here if python --version show 3.0+ you should use let g:python_host_prog = '/usr/bin/python2'
 let g:python3_host_prog = '/Library/Frameworks/Python.framework/Versions/3.7/bin/python3'
 
-set number
+set relativenumber
 set encoding=UTF-8
 set tabstop=2
 set softtabstop=2
@@ -70,7 +70,7 @@ let g:netrw_winsize = 25
 "}
 
 call plug#begin('~/.config/plugin')
-  Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
   " 全局搜索插件 Ack'
   Plug 'wincent/ferret'
