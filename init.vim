@@ -31,7 +31,7 @@ set expandtab
 " }
 
 set ruler                   " 打开状态栏标尺
-syntax enable               " 自动语法高亮
+syntax on               " 自动语法高亮
 set hlsearch                " 搜索时高亮显示被找到的文本
 set showmatch
 set cursorline              " 高亮当前行
@@ -155,8 +155,10 @@ nmap <leader>z <Plug>(FerretAckWord)
 
 " if jsx {
   let g:jsx_ext_required = 0
-  "autocmd BufNewFile,BufRead *.tsx  set filetype=typescript.tsx
+  autocmd BufNewFile,BufRead *.tsx  set filetype=typescript.tsx
   autocmd BufRead,BufNewFile *.tsx setlocal syntax=typescript.jsx
+  au BufNewFile,BufRead *.js,*.javascript,*.es,*.mjs   setf javascript 
+
 "}
 
 " if ts | tsx {
@@ -326,7 +328,7 @@ au BufWritePost .vimrc source $MYVIMRC | AirlineRefresh
   augroup mygroup
     autocmd!
     " Setup formatexpr specified filetype(s).
-    autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
+     autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
     " Update signature help on jump placeholder
     autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
   augroup end
