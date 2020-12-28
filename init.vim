@@ -3,9 +3,9 @@ let g:python3_host_prog = '/Library/Frameworks/Python.framework/Versions/3.7/bin
 
 set relativenumber
 set encoding=UTF-8
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 set autoindent "自动缩进
 set copyindent "复制保持原来的缩进
 set smartindent
@@ -43,8 +43,8 @@ set infercase               " 区分大小写
 
 set termguicolors
 "colorscheme space_vim_theme
-"colorscheme molokai
-colorscheme janah
+colorscheme molokai
+"colorscheme janah
 
 " tree
 let g:netrw_liststyle = 3
@@ -67,6 +67,7 @@ let g:netrw_winsize = 25
   map <S-L> gt
   nmap <leader>v "+gp
   nmap <leader>c "+y
+  nmap <leader>t :newtab<CR><C-E>
 "}
 
 call plug#begin('~/.config/plugin')
@@ -103,6 +104,8 @@ call plug#begin('~/.config/plugin')
   Plug 'scrooloose/nerdcommenter'
   Plug 'jparise/vim-graphql'
 call plug#end()
+
+inoremap jj <ESC>
 
 " Ack 快捷键
 " Instead of <leader>a, use <leader>x.
