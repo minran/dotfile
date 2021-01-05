@@ -1,0 +1,2 @@
+# dotfile
+neovim init.vim
