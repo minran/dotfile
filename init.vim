@@ -42,9 +42,12 @@ set infercase               " 区分大小写
 
 
 set termguicolors
+set t_Co=256
+set background=light " 白色
 "colorscheme space_vim_theme
-colorscheme molokai
+"colorscheme molokai
 "colorscheme janah
+colorscheme one
 
 " tree
 let g:netrw_liststyle = 3
@@ -67,7 +70,7 @@ let g:netrw_winsize = 25
   map <S-L> gt
   nmap <leader>v "+gp
   nmap <leader>c "+y
-  nmap <leader>t :newtab<CR><C-E>
+  nmap <leader>t :tabnew<CR><C-E>
 "}
 
 call plug#begin('~/.config/plugin')
@@ -103,6 +106,7 @@ call plug#begin('~/.config/plugin')
   Plug 'anyakichi/vim-surround'
   Plug 'scrooloose/nerdcommenter'
   Plug 'jparise/vim-graphql'
+  Plug 'google/vim-colorscheme-primary'
 call plug#end()
 
 inoremap jj <ESC>
@@ -125,7 +129,7 @@ nmap <leader>z <Plug>(FerretAckWord)
   let NERDTreeShowBookmarks=1
 
 " if airline {
-  let g:airline_theme='molokai'
+  let g:airline_theme='google_light'
 
   set laststatus=2  "永远显示状态栏
   let g:airline_powerline_fonts = 1  " 支持 powerline 字体
@@ -191,7 +195,7 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 "if Tagbar {
   nnoremap <silent> <leader>tt :TagbarToggle<CR>
 
-  "let g:tagbar_ctags_bin = 'ctags'
+  let g:tagbar_ctags_bin = 'ctags'
   let g:tagbar_type_javascript = {
         \ 'ctagsbin': 'ctags',
         \ 'ctagstype': 'javascript',
