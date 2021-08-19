@@ -67,7 +67,7 @@ let g:netrw_winsize = 25
   map <S-L> gt
   nmap <leader>v "+gp
   nmap <leader>c "+y
-  nmap <leader>t :newtab<CR><C-E>
+  nmap <leader>t :tabnew<CR><C-E>
 "}
 
 call plug#begin('~/.config/plugin')
