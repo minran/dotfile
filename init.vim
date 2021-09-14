@@ -121,6 +121,7 @@ Plug 'flazz/vim-colorschemes'
 " markdown
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'phanviet/vim-monokai-pro'
+Plug 'chemzqm/wxapp.vim'
 call plug#end()
 
 inoremap jj <ESC>
