@@ -1,7 +1,8 @@
 let g:python_host_prog = '/usr/bin/python'  " here if python --version show 3.0+ you should use let g:python_host_prog = '/usr/bin/python2'
 let g:python3_host_prog = '/Library/Frameworks/Python.framework/Versions/3.7/bin/python3'
 set hidden
-set relativenumber
+"set relativenumber
+set number
 set encoding=UTF-8
 set tabstop=2
 set softtabstop=2
@@ -41,15 +42,18 @@ set infercase               " 区分大小写
 
 
 
-set termguicolors
+"set term=xterm-256color
+if has("termguicolors")
+  "set termguicolors
+endif
+
 "set background=light " 白色
-set background=dark " 白色
+"set background=dark " 白色
 "colorscheme space_vim_theme
-"colorscheme molokai
-"colorscheme janah
-
-colorscheme hopscotch
-
+colorscheme monokai_pro
+let g:lightline = {
+    \ 'colorscheme': 'monokai_pro',
+    \}
 " tree
 let g:netrw_liststyle = 3
 let g:netrw_banner = 0
@@ -112,6 +116,11 @@ Plug 'google/vim-colorscheme-primary'
 Plug 'liuchengxu/vista.vim'
 " org mode
 Plug 'kristijanhusak/orgmode.nvim'
+" theme
+Plug 'flazz/vim-colorschemes'
+" markdown
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+Plug 'phanviet/vim-monokai-pro'
 call plug#end()
 
 inoremap jj <ESC>
@@ -138,8 +147,8 @@ nnoremap <silent> <c-p> :Files <CR>
 "let NERDTreeShowBookmarks=1
 
 " if airline {
-"let g:airline_theme='google_light'
-let g:airline_theme='molokai'
+let g:airline_theme='hybrid'
+"let g:airline_theme='molokai'
 
 set laststatus=2  "永远显示状态栏
 let g:airline_powerline_fonts = 1  " 支持 powerline 字体
@@ -509,5 +518,10 @@ nmap <leader>e :CocCommand explorer <CR>
 " List all presets
 nnoremap <space>el :CocList explPresets
 "}
+
+"markdown map
+nmap <C-s> <Plug>MarkdownPreview
+nmap <M-s> <Plug>MarkdownPreviewStop
+nmap <C-p> <Plug>MarkdownPreviewToggle
 
 autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
