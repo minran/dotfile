@@ -1,7 +1,6 @@
 let g:python_host_prog = '/usr/bin/python'  " here if python --version show 3.0+ you should use let g:python_host_prog = '/usr/bin/python2'
 let g:python3_host_prog = '/Library/Frameworks/Python.framework/Versions/3.7/bin/python3'
-set hidden
-"set relativenumber
+set hidden "set relativenumber
 set number
 set encoding=UTF-8
 set tabstop=2
@@ -51,9 +50,8 @@ endif
 "set background=dark " 白色
 "colorscheme space_vim_theme
 colorscheme monokai_pro
-let g:lightline = {
-    \ 'colorscheme': 'monokai_pro',
-    \}
+"colorscheme janah 
+
 " tree
 let g:netrw_liststyle = 3
 let g:netrw_banner = 0
@@ -122,6 +120,7 @@ Plug 'flazz/vim-colorschemes'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'phanviet/vim-monokai-pro'
 Plug 'chemzqm/wxapp.vim'
+Plug 'navarasu/onedark.nvim'
 call plug#end()
 
 inoremap jj <ESC>
