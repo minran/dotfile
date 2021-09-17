@@ -86,7 +86,7 @@ Plug 'wincent/ferret'
 " Typescript 高亮插件
 Plug 'leafgarland/typescript-vim'
 Plug 'HerringtonDarkholme/yats.vim'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'majutsushi/tagbar'
 " NerdTree
@@ -526,3 +526,4 @@ nmap <M-s> <Plug>MarkdownPreviewStop
 nmap <C-p> <Plug>MarkdownPreviewToggle
 
 autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
+" 加速plug下载
