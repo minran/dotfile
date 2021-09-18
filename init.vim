@@ -514,6 +514,7 @@ nnoremap <space>ef :CocCommand explorer --preset floating<CR>
 nnoremap <space>ec :CocCommand explorer --preset cocConfig<CR>
 nnoremap <space>eb :CocCommand explorer --preset buffer<CR>
 nmap <leader>e :CocCommand explorer <CR>
+autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
 
 " List all presets
 nnoremap <space>el :CocList explPresets
