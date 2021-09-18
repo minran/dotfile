@@ -11,7 +11,7 @@
 
   },
   "explorer.icon.enableNerdfont": true,
-  "explorer.previewAction.onHover": false,
+  "explorer.previewAction.onHover": "labeling",
   "explorer.file.showHiddenFiles": true,
 
 }
