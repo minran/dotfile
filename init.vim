@@ -49,7 +49,7 @@ endif
 "set background=light " 白色
 "set background=dark " 白色
 "colorscheme space_vim_theme
-colorscheme monokai_pro
+"colorscheme monokai_pro
 "colorscheme janah 
 
 " tree
@@ -121,6 +121,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'phanviet/vim-monokai-pro'
 Plug 'chemzqm/wxapp.vim'
 Plug 'navarasu/onedark.nvim'
+Plug 'vimwiki/vimwiki'
 call plug#end()
 
 inoremap jj <ESC>
@@ -147,8 +148,8 @@ nnoremap <silent> <c-p> :Files <CR>
 "let NERDTreeShowBookmarks=1
 
 " if airline {
-let g:airline_theme='hybrid'
-"let g:airline_theme='molokai'
+"let g:airline_theme='hybrid'
+let g:airline_theme='molokai'
 
 set laststatus=2  "永远显示状态栏
 let g:airline_powerline_fonts = 1  " 支持 powerline 字体
@@ -214,6 +215,10 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 "if Tagbar {
 "nnoremap <silent> <leader>tt :TagbarToggle<CR>
+
+"if vimwiki {
+let g:vimwiki_listsyms = '✗○◐●✓'
+"endif
 
 "let g:tagbar_ctags_bin = 'ctags'
 let g:tagbar_type_javascript = {
