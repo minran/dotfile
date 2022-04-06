@@ -1,5 +1,6 @@
-let g:python_host_prog = '/usr/bin/python'  " here if python --version show 3.0+ you should use let g:python_host_prog = '/usr/bin/python2'
-let g:python3_host_prog = '/Library/Frameworks/Python.framework/Versions/3.7/bin/python3'
+let g:python_host_prog = 'C:\Python27'
+
+let g:python3_host_prog = 'C:\Users\Alex\AppData\Local\Programs\Python\Python38'
 
 set relativenumber
 set encoding=UTF-8
@@ -69,7 +70,7 @@ let g:netrw_winsize = 25
   nmap <leader>c "+y
 "}
 
-call plug#begin('~/.config/plugin')
+call plug#begin('C:\Users\Alex\AppData\Local\nvim-data\plugin')
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
   " 全局搜索插件 Ack'
@@ -95,7 +96,7 @@ call plug#begin('~/.config/plugin')
   " 启动页
   Plug 'mhinz/vim-startify'
   " git
-  Plug 'tpope/vim-fugitive'
+  "Plug 'tpope/vim-fugitive'
   Plug 'junegunn/gv.vim'
   Plug 'airblade/vim-gitgutter'
   " 改变包围结构
@@ -361,7 +362,7 @@ au BufWritePost .vimrc source $MYVIMRC | AirlineRefresh
   " Show all diagnostics
   nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
   " Manage extensions
-  nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
+  "nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
   " Show commands
   nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
   " Find symbol of current document
@@ -376,3 +377,13 @@ au BufWritePost .vimrc source $MYVIMRC | AirlineRefresh
   nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 " }
 autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
+
+nmap <space>e <Cmd>CocCommand explorer<CR>
+" Use preset argument to open it
+nmap <space>ed <Cmd>CocCommand explorer --preset .vim<CR>
+nmap <space>ef <Cmd>CocCommand explorer --preset floating<CR>
+nmap <space>ec <Cmd>CocCommand explorer --preset cocConfig<CR>
+nmap <space>eb <Cmd>CocCommand explorer --preset buffer<CR>
+
+" List all presets
+nmap <space>el <Cmd>CocList explPresets<CR>
