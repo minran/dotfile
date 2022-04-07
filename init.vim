@@ -111,6 +111,9 @@ call plug#begin('C:\Users\Alex\AppData\Local\nvim-data\plugin')
   Plug 'anyakichi/vim-surround'
   Plug 'scrooloose/nerdcommenter'
   Plug 'jparise/vim-graphql'
+
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'nvim-telescope/telescope.nvim'
 call plug#end()
 
 inoremap jj <ESC>
@@ -530,3 +533,9 @@ nmap <space>eb <Cmd>CocCommand explorer --preset buffer<CR>
 
 " List all presets
 nmap <space>el <Cmd>CocList explPresets<CR>
+
+" telescope
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
