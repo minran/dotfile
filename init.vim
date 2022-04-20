@@ -50,6 +50,7 @@ endif
 "set background=dark " 白色
 "colorscheme space_vim_theme
 "colorscheme monokai_pro
+colorscheme monokai
 "colorscheme janah 
 
 " tree
@@ -116,12 +117,15 @@ Plug 'liuchengxu/vista.vim'
 Plug 'kristijanhusak/orgmode.nvim'
 " theme
 Plug 'flazz/vim-colorschemes'
+Plug 'Mofiqul/vscode.nvim'
 " markdown
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'phanviet/vim-monokai-pro'
 Plug 'chemzqm/wxapp.vim'
 Plug 'navarasu/onedark.nvim'
 Plug 'vimwiki/vimwiki'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 call plug#end()
 
 inoremap jj <ESC>
@@ -148,8 +152,8 @@ nnoremap <silent> <c-p> :Files <CR>
 "let NERDTreeShowBookmarks=1
 
 " if airline {
-"let g:airline_theme='hybrid'
-let g:airline_theme='molokai'
+let g:airline_theme='hybrid'
+"let g:airline_theme='molokai'
 
 set laststatus=2  "永远显示状态栏
 let g:airline_powerline_fonts = 1  " 支持 powerline 字体
@@ -531,4 +535,9 @@ nmap <M-s> <Plug>MarkdownPreviewStop
 nmap <C-p> <Plug>MarkdownPreviewToggle
 
 autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
-" 加速plug下载
+
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
