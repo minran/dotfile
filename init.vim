@@ -114,7 +114,6 @@ Plug 'jparise/vim-graphql'
 Plug 'google/vim-colorscheme-primary'
 Plug 'liuchengxu/vista.vim'
 " org mode
-Plug 'kristijanhusak/orgmode.nvim'
 " theme
 Plug 'flazz/vim-colorschemes'
 Plug 'Mofiqul/vscode.nvim'
