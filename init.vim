@@ -125,6 +125,8 @@ Plug 'navarasu/onedark.nvim'
 Plug 'vimwiki/vimwiki'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+" vista
+Plug 'liuchengxu/vista.vim'
 call plug#end()
 
 inoremap jj <ESC>
@@ -540,3 +542,8 @@ nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+"date
+nmap <leader>rt i<C-R>=strftime("%Y-%m-%d %Ea %H:%M:%S")<CR><Esc>
+imap <leader>rt  <C-R>=strftime("%Y-%m-%d %a %H:%M:%S")<CR>
+command Date execute "normal i<C-R>=strftime('%F %T')<CR><ESC>"
