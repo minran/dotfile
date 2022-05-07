@@ -127,6 +127,8 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 " vista
 Plug 'liuchengxu/vista.vim'
+" calendar
+Plug 'itchyny/calendar.vim'
 call plug#end()
 
 inoremap jj <ESC>
@@ -543,7 +545,14 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
-"date
-nmap <leader>rt i<C-R>=strftime("%Y-%m-%d %Ea %H:%M:%S")<CR><Esc>
-imap <leader>rt  <C-R>=strftime("%Y-%m-%d %a %H:%M:%S")<CR>
+"date 
+nmap <space>rd i<C-R>=strftime("%Y-%m-%d %a")<CR><Esc>
+imap <space>rd  <C-R>=strftime("%Y-%m-%d %a")<CR>
+"time 
+nmap <space>rt i<C-R>=strftime("%H:%M:%S")<CR><Esc>
+imap <space>rt <C-R>=strftime("%H:%M:%S")<CR>
 command Date execute "normal i<C-R>=strftime('%F %T')<CR><ESC>"
+
+" calendar
+nmap <space>ca :Calendar<cr>
+autocmd FileType calendar nmap <buffer> <CR> :<C-u>call vimwiki#diary#calendar_action(b:calendar.day().get_day(), b:calendar.day().get_month(), b:calendar.day().get_year(), b:calendar.day().week(),"V")<CR>
