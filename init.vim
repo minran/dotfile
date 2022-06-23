@@ -47,11 +47,11 @@ if has("termguicolors")
 endif
 
 "set background=light " 白色
-"set background=dark " 白色
+set background=dark " 白色
 "colorscheme space_vim_theme
 "colorscheme monokai_pro
-colorscheme monokai
-"colorscheme janah 
+"colorscheme monokai
+colorscheme janah 
 
 " tree
 let g:netrw_liststyle = 3
@@ -379,9 +379,9 @@ function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
-
 " Use <c-space> to trigger completion.
-inoremap <silent><expr> <c-space> coc#refresh()
+"
+"inoremap <silent><expr> <c-space> coc#refresh()
 
 " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
 " Coc only does snippet and additional edit on confirm.
@@ -454,23 +454,23 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Using CocList
 " Show all diagnostics
-nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
+"nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
 " Manage extensions
 " nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
 " Show commands
-nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
+"nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
 " Find symbol of current document
-nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
+"nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
 " Search workspace symbols
-nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
+"nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
 " Do default action for next item.
-nnoremap <silent> <space>j  :<C-u>CocNext<CR>
+"nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 " Do default action for previous item.
-nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
+"nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
-nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+"nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 " using extends
-nnoremap <space>e :CocCommand explorer<CR>
+"nnoremap <space>e :CocCommand explorer<CR>
 " l 展开文件夹， h 收起文件夹 
 " }
 
@@ -521,15 +521,15 @@ let g:coc_explorer_global_presets = {
 \ }
 
 " Use preset argument to open it
-nnoremap <space>ed :CocCommand explorer --preset .vim<CR>
-nnoremap <space>ef :CocCommand explorer --preset floating<CR>
-nnoremap <space>ec :CocCommand explorer --preset cocConfig<CR>
-nnoremap <space>eb :CocCommand explorer --preset buffer<CR>
+nnoremap <leader>ed :CocCommand explorer --preset .vim<CR>
+nnoremap <leader>ef :CocCommand explorer --preset floating<CR>
+nnoremap <leader>ec :CocCommand explorer --preset cocConfig<CR>
+nnoremap <leader>eb :CocCommand explorer --preset buffer<CR>
 nmap <leader>e :CocCommand explorer <CR>
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
 
 " List all presets
-nnoremap <space>el :CocList explPresets
+nnoremap <leader>el :CocList explPresets
 "}
 
 "markdown map
@@ -546,13 +546,13 @@ nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 "date 
-nmap <space>rd i<C-R>=strftime("%Y-%m-%d %a")<CR><Esc>
-imap <space>rd  <C-R>=strftime("%Y-%m-%d %a")<CR>
+nmap <leader>rd i<C-R>=strftime("%Y-%m-%d %a")<CR><Esc>
+imap <leader>rd  <C-R>=strftime("%Y-%m-%d %a")<CR>
 "time 
-nmap <space>rt i<C-R>=strftime("%H:%M:%S")<CR><Esc>
-imap <space>rt <C-R>=strftime("%H:%M:%S")<CR>
+nmap <leader>rt i<C-R>=strftime("%H:%M:%S")<CR><Esc>
+imap <leader>rt <C-R>=strftime("%H:%M:%S")<CR>
 command Date execute "normal i<C-R>=strftime('%F %T')<CR><ESC>"
 
 " calendar
-nmap <space>ca :Calendar<cr>
+nmap <leader>ca :Calendar<cr>
 autocmd FileType calendar nmap <buffer> <CR> :<C-u>call vimwiki#diary#calendar_action(b:calendar.day().get_day(), b:calendar.day().get_month(), b:calendar.day().get_year(), b:calendar.day().week(),"V")<CR>
