@@ -50,8 +50,8 @@ endif
 set background=dark " 白色
 "colorscheme space_vim_theme
 "colorscheme monokai_pro
-"colorscheme monokai
-colorscheme janah 
+colorscheme monokai
+"colorscheme janah 
 
 " tree
 let g:netrw_liststyle = 3
@@ -91,8 +91,17 @@ Plug 'majutsushi/tagbar'
 " NerdTree
 "Plug 'scrooloose/nerdtree'
 " airline
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
+
+"galaxyline
+"Plug 'glepnir/galaxyline.nvim' , { 'branch': 'main' }
+"Plug 'ryanoasis/vim-devicons'       " vimscript
+
+"lualine
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
+
 " if jsx or React
 Plug 'sheerun/vim-polyglot'
 " neovim 快速跳转插件
@@ -155,37 +164,37 @@ nnoremap <silent> <c-p> :Files <CR>
 "let NERDTreeShowBookmarks=1
 
 " if airline {
-let g:airline_theme='hybrid'
+"let g:airline_theme='hybrid'
 "let g:airline_theme='molokai'
 
-set laststatus=2  "永远显示状态栏
-let g:airline_powerline_fonts = 1  " 支持 powerline 字体
-let g:airline#extensions#tabline#enabled = 1 " 显示窗口tab和buffer
+"set laststatus=2  "永远显示状态栏
+"let g:airline_powerline_fonts = 1  " 支持 powerline 字体
+"let g:airline#extensions#tabline#enabled = 1 " 显示窗口tab和buffer
 
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-endif
+"if !exists('g:airline_symbols')
+  "let g:airline_symbols = {}
+"endif
 " unicode symbols
-let g:airline_left_sep = '»'
-let g:airline_left_sep = '▶'
-let g:airline_right_sep = '«'
-let g:airline_right_sep = '◀'
+"let g:airline_left_sep = '»'
+"let g:airline_left_sep = '▶'
+"let g:airline_right_sep = '«'
+"let g:airline_right_sep = '◀'
 
-let g:airline_symbols.linenr = '☰'
-let g:airline_symbols.paste = 'ρ'
-let g:airline_symbols.paste = 'Þ'
-let g:airline_symbols.notexists = '∄'
-let g:airline_symbols.whitespace = 'Ξ'
+"let g:airline_symbols.linenr = '☰'
+"let g:airline_symbols.paste = 'ρ'
+"let g:airline_symbols.paste = 'Þ'
+"let g:airline_symbols.notexists = '∄'
+"let g:airline_symbols.whitespace = 'Ξ'
 
 " powerline symbols
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
-let g:airline_symbols.branch = ''
-let g:airline_symbols.readonly = ''
-let g:airline_symbols.linenr = '☰'
-let g:airline_symbols.maxlinenr = ''
+"let g:airline_left_sep = ''
+"let g:airline_left_alt_sep = ''
+"let g:airline_right_sep = ''
+"let g:airline_right_alt_sep = ''
+"let g:airline_symbols.branch = ''
+"let g:airline_symbols.readonly = ''
+"let g:airline_symbols.linenr = '☰'
+"let g:airline_symbols.maxlinenr = ''
 "}
 
 " if jsx {
@@ -347,8 +356,8 @@ let g:bookmark_highlight_lines = 1
 
 " orgmode.nvim
 
-au BufWritePost *.vim source $MYVIMRC | AirlineRefresh
-au BufWritePost .vimrc source $MYVIMRC | AirlineRefresh
+"au BufWritePost *.vim source $MYVIMRC | AirlineRefresh
+"au BufWritePost .vimrc source $MYVIMRC | AirlineRefresh
 
 " if coc{
 " if hidden is not set, TextEdit might fail.
@@ -556,3 +565,8 @@ command Date execute "normal i<C-R>=strftime('%F %T')<CR><ESC>"
 " calendar
 nmap <leader>ca :Calendar<cr>
 autocmd FileType calendar nmap <buffer> <CR> :<C-u>call vimwiki#diary#calendar_action(b:calendar.day().get_day(), b:calendar.day().get_month(), b:calendar.day().get_year(), b:calendar.day().week(),"V")<CR>
+
+" need FiraCode font-family
+lua << END
+require('evil_lualine')
+END
