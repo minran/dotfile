@@ -138,6 +138,7 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'liuchengxu/vista.vim'
 " calendar
 Plug 'itchyny/calendar.vim'
+
 call plug#end()
 
 inoremap jj <ESC>
@@ -569,4 +570,6 @@ autocmd FileType calendar nmap <buffer> <CR> :<C-u>call vimwiki#diary#calendar_a
 " need FiraCode font-family
 lua << END
 require('evil_lualine')
+require('plugins')
+require('rust-tools-configuration')
 END
