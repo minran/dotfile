@@ -18,5 +18,6 @@
     "<cr>": ["expandable?", "expand", "open"],
     "v": "open:vsplit"
   },
+  "rust-analyzer.enable": true,
 
 }

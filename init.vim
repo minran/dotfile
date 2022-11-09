@@ -80,6 +80,8 @@ nmap <leader>t :tabnew<CR><C-E>
 call plug#begin('~/.config/plugin')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
+Plug 'rust-lang/rust.vim'
+
 " 全局搜索插件 Ack'
 Plug 'wincent/ferret'
 " Typescript 高亮插件
@@ -594,10 +596,11 @@ command Date execute "normal i<C-R>=strftime('%F %T')<CR><ESC>"
 " calendar
 nmap <leader>ca :Calendar<cr>
 autocmd FileType calendar nmap <buffer> <CR> :<C-u>call vimwiki#diary#calendar_action(b:calendar.day().get_day(), b:calendar.day().get_month(), b:calendar.day().get_year(), b:calendar.day().week(),"V")<CR>
-
+let g:rustfmt_autosave = 1
+let g:rust_cargo_use_clippy = 1
 " need FiraCode font-family
+"require('plugins')
+"require('rust-tools-configuration')
 lua << END
 require('evil_lualine')
-require('plugins')
-require('rust-tools-configuration')
 END
