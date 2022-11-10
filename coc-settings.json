@@ -1,7 +1,6 @@
 {
   "tsserver.enableJavascript": false,
   "languageserver": {
-    // "tsserver.npm": "/usr/local/bin/npm",
     "golang": {
       "command": "gopls",
       "args": ["serve", "-debug", "0.0.0.0:8484", "-rpc.trace"],
@@ -12,12 +11,40 @@
   },
   "explorer.width": 30,
   "explorer.icon.enableNerdfont": true,
-  // "explorer.previewAction.onHover": "labeling",
   "explorer.file.showHiddenFiles": true,
   "explorer.keyMappings.global": {
     "<cr>": ["expandable?", "expand", "open"],
     "v": "open:vsplit"
   },
   "rust-analyzer.enable": true,
-
+  "snippets.ultisnips.pythonPrompt": false,
+  "suggest.completionItemKindLabels": {
+    "constructor": "\ufb25",
+    "keyword": "\uf1de",
+    "variable": "\ue79b",
+    "value": "\uf89f",
+    "operator": "\u03a8",
+    "function": "\u0192",
+    "reference": "\ufa46",
+    "constant": "\uf8fe",
+    "method": "\uf09a",
+    "struct": "\ufb44",
+    "class": "\uf0e8",
+    "interface": "\uf417",
+    "text": "\ue612",
+    "enum": "\uf435",
+    "enumMember": "\uf02b",
+    "module": "\uf40d",
+    "color": "\ue22b",
+    "property": "\ue624",
+    "field": "\uf9be",
+    "unit": "\uf475",
+    "event": "\ufacd",
+    "file": "\uf723",
+    "folder": "\uf114",
+    "snippet": "\ue60b",
+    "typeParameter": "\uf728",
+    "default": " "
+  },
+  "suggest.formatItems": ["abbr", "menu", "kind"]
 }
