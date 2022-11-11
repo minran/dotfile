@@ -18,6 +18,7 @@
   },
   "rust-analyzer.enable": true,
   "snippets.ultisnips.pythonPrompt": false,
+  "suggest.noselect": false,
   "suggest.completionItemKindLabels": {
     "constructor": "\ufb25",
     "keyword": "\uf1de",
@@ -54,4 +55,5 @@
   "coc.source.word.enable": true,
   "coc.source.omni.enable": true,
   "coc.source.syntax.enable": true
+
 }
