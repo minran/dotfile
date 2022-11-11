@@ -404,4 +404,5 @@ lua << END
 require('plugins')
 require('rust-tools-configuration')
 require('evil_lualine')
+require('nvimtree')
 END
