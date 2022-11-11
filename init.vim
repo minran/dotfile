@@ -78,8 +78,8 @@ nmap <leader>t :tabnew<CR><C-E>
 "}
 
 call plug#begin('~/.config/plugin')
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
 Plug 'rust-lang/rust.vim'
 
 " 全局搜索插件 Ack'
@@ -363,15 +363,15 @@ let g:bookmark_highlight_lines = 1
 "au BufWritePost .vimrc source $MYVIMRC | AirlineRefresh
 
 " Use preset argument to open it
-nnoremap <leader>ed :CocCommand explorer --preset .vim<CR>
-nnoremap <leader>ef :CocCommand explorer --preset floating<CR>
-nnoremap <leader>ec :CocCommand explorer --preset cocConfig<CR>
-nnoremap <leader>eb :CocCommand explorer --preset buffer<CR>
-nmap <leader>e :CocCommand explorer <CR>
-autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
+"nnoremap <leader>ed :CocCommand explorer --preset .vim<CR>
+"nnoremap <leader>ef :CocCommand explorer --preset floating<CR>
+"nnoremap <leader>ec :CocCommand explorer --preset cocConfig<CR>
+"nnoremap <leader>eb :CocCommand explorer --preset buffer<CR>
+"nmap <leader>e :CocCommand explorer <CR>
+"autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
 
 " List all presets
-nnoremap <leader>el :CocList explPresets
+"nnoremap <leader>el :CocList explPresets
 "}
 
 "markdown map
@@ -399,10 +399,9 @@ autocmd FileType calendar nmap <buffer> <CR> :<C-u>call vimwiki#diary#calendar_a
 let g:rustfmt_autosave = 1
 let g:rust_cargo_use_clippy = 1
 " need FiraCode font-family
-"require('plugins')
-"require('rust-tools-configuration')
+"require('coc')
 lua << END
+require('plugins')
+require('rust-tools-configuration')
 require('evil_lualine')
-require('coc')
 END
-
