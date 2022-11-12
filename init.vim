@@ -1,5 +1,5 @@
-let g:python_host_prog = '/usr/bin/python'  " here if python --version show 3.0+ you should use let g:python_host_prog = '/usr/bin/python2'
-let g:python3_host_prog = '/Library/Frameworks/Python.framework/Versions/3.7/bin/python3'
+"let g:python_host_prog = '/usr/bin/python'  " here if python --version show 3.0+ you should use let g:python_host_prog = '/usr/bin/python2'
+"let g:python3_host_prog = '/Library/Frameworks/Python.framework/Versions/3.7/bin/python3'
 set hidden "set relativenumber
 set number
 set encoding=UTF-8

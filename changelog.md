@@ -1,3 +1,9 @@
+### 2022-11-12 六 23:28:34   
+
+- annotation python setup in init.vim
+- No "python3" provider found. Run :checkhealth provider
+  - python3 -m pip install --user --upgrade pynvim
+
 ### 2022-11-11 五 16:37:00
 - add nvim-mason
 - add nvim-cmp

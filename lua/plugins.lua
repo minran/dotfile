@@ -25,6 +25,9 @@ return require('packer').startup(function(use)
     },
     tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
+  -- Snippet engine and snippet template
+  use { "SirVer/ultisnips", event = "InsertEnter" }
+  use { "honza/vim-snippets", after = "ultisnips" }
 
   use { "onsails/lspkind-nvim" }
   -- auto-completion engine
@@ -37,7 +40,7 @@ return require('packer').startup(function(use)
   use { "hrsh7th/cmp-path", after = "nvim-cmp" }
   use { "hrsh7th/cmp-buffer", after = "nvim-cmp" }
   use { "hrsh7th/cmp-omni", after = "nvim-cmp" }
-  --use { "quangnguyen30192/cmp-nvim-ultisnips", after = { "nvim-cmp", "ultisnips" } }
+  use { "quangnguyen30192/cmp-nvim-ultisnips", after = { "nvim-cmp", "ultisnips" } }
   if vim.g.is_mac then
     use { "hrsh7th/cmp-emoji", after = "nvim-cmp" }
   end
