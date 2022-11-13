@@ -1,7 +1,7 @@
 "let g:python_host_prog = '/usr/bin/python'  " here if python --version show 3.0+ you should use let g:python_host_prog = '/usr/bin/python2'
 "let g:python3_host_prog = '/Library/Frameworks/Python.framework/Versions/3.7/bin/python3'
 set hidden "set relativenumber
-set number
+set number 
 set encoding=UTF-8
 set tabstop=2
 set softtabstop=2
@@ -399,7 +399,6 @@ autocmd FileType calendar nmap <buffer> <CR> :<C-u>call vimwiki#diary#calendar_a
 let g:rustfmt_autosave = 1
 let g:rust_cargo_use_clippy = 1
 " need FiraCode font-family
-"require('coc')
 lua << END
 require('plugins')
 require('nvimtree')
