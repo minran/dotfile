@@ -1,3 +1,6 @@
+### 2022-11-13 日 22:29:34 
+- rust-tools  and nvim-lspconfig on_attach config conflict ✌️
+ 
 ### 2022-11-12 六 23:28:34   
 
 - annotation python setup in init.vim

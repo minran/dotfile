@@ -407,4 +407,5 @@ require('nvimmason')
 require('nvimcmp')
 require('rust-tools-configuration')
 require('evil_lualine')
+require('nvimtreesitter')
 END
