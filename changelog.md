@@ -1,3 +1,6 @@
+### 2022-11-14 一23:39:15  
+- add lua/nvim_tokyonight.lua plugin
+
 ### 2022-11-14 一 19:00:27  
 - set nvim-tree config
  

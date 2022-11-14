@@ -47,10 +47,10 @@ if has("termguicolors")
 endif
 
 "set background=light " 白色
-set background=dark " 白色
+set background=dark " 黑色
 "colorscheme space_vim_theme
 "colorscheme monokai_pro
-colorscheme monokai
+"colorscheme monokai
 "colorscheme janah 
 
 " tree
@@ -102,7 +102,7 @@ Plug 'majutsushi/tagbar'
 
 "lualine
 Plug 'nvim-lualine/lualine.nvim'
-Plug 'kyazdani42/nvim-web-devicons'
+"Plug 'kyazdani42/nvim-web-devicons'
 
 " if jsx or React
 Plug 'sheerun/vim-polyglot'
@@ -113,7 +113,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 " 标签
 Plug 'mattesgroeger/vim-bookmarks'
 " 启动页
-Plug 'mhinz/vim-startify'
+"Plug 'mhinz/vim-startify'
 " git
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
@@ -400,7 +400,9 @@ let g:rustfmt_autosave = 1
 let g:rust_cargo_use_clippy = 1
 " need FiraCode font-family
 lua << END
+vim.cmd[[colorscheme tokyonight]]
 require('plugins')
+require('tokyonight')
 require('nvimtree')
 require('nvimlspconfig')
 require('nvimmason')
@@ -409,3 +411,4 @@ require('rust-tools-configuration')
 require('evil_lualine')
 require('nvimtreesitter')
 END
+

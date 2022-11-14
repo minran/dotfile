@@ -3,30 +3,56 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
-  use 'neovim/nvim-lspconfig'
+  use 'nvim-lua/plenary.nvim'
+
+  use { 'nvim-lua/popup.nvim', disable = true }
+
+  use { 'MunifTanjim/nui.nvim', disable = true }
 
   use {
-    "williamboman/mason.nvim",
+    'nvim-tree/nvim-web-devicons',
   }
+
+  use {
+    'goolord/alpha-nvim',
+    disable = true,
+    config = function ()
+        require'alpha'.setup(require'alpha.themes.dashboard'.config)
+    end
+  }
+
+  use{
+    "glepnir/lspsaga.nvim",
+    disable = true,
+    branch = "main",
+    config = function()
+        local saga = require("lspsaga")
+
+        saga.init_lsp_saga({
+            -- your configuration
+        })
+    end,
+  }
+
+  use 'folke/tokyonight.nvim'
+
+  use 'neovim/nvim-lspconfig'
 
   use 'nvim-treesitter/nvim-treesitter'
 
-  use {
-    "williamboman/mason-lspconfig.nvim",
-  }
+  use {"williamboman/mason.nvim"}
+
+  use {"williamboman/mason-lspconfig.nvim"}
 
   -- rust-toos.nvim
   use 'simrat39/rust-tools.nvim'
 
+
   -- Debugging
-  use 'nvim-lua/plenary.nvim'
   use 'mfussenegger/nvim-dap'
   -- nvim-tree
   use {
     'nvim-tree/nvim-tree.lua',
-    requires = {
-      'nvim-tree/nvim-web-devicons', -- optional, for file icons
-    },
     tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
   -- Snippet engine and snippet template
@@ -48,3 +74,4 @@ return require('packer').startup(function(use)
     use { "hrsh7th/cmp-emoji", after = "nvim-cmp" }
   end
 end)
+
