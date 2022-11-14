@@ -403,6 +403,7 @@ lua << END
 vim.cmd[[colorscheme tokyonight]]
 require('plugins')
 require('tokyonight')
+require('nvim_alpha')
 require('nvimtree')
 require('nvimlspconfig')
 require('nvimmason')

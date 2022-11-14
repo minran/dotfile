@@ -15,10 +15,6 @@ return require('packer').startup(function(use)
 
   use {
     'goolord/alpha-nvim',
-    disable = true,
-    config = function ()
-        require'alpha'.setup(require'alpha.themes.dashboard'.config)
-    end
   }
 
   use{
