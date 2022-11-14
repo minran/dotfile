@@ -47,6 +47,11 @@ require('lspconfig')['sumneko_lua'].setup {
   flags = lsp_flags,
 }
 
+require('lspconfig')['volar'].setup {
+  on_attach = on_attach,
+  flags = lsp_flags,
+}
+
 require('lspconfig')['tsserver'].setup {
   on_attach = on_attach,
   filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
