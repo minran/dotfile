@@ -1,3 +1,6 @@
+### 2022-11-14 一 19:00:27  
+- set nvim-tree config
+ 
 ### 2022-11-13 日 22:29:34 
 - rust-tools  and nvim-lspconfig on_attach config conflict ✌️
  
