@@ -30,7 +30,14 @@ return require('packer').startup(function(use)
     end,
   }
 
-  use 'folke/tokyonight.nvim'
+  use {
+    'tanvirtin/monokai.nvim',
+  }
+
+  use {
+    'folke/tokyonight.nvim',
+    disable = true
+  }
 
   use 'neovim/nvim-lspconfig'
 
