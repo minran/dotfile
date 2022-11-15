@@ -1,0 +1,12 @@
+--vim.cmd[[colorscheme tokyonight]]
+--require('tokyonight')
+require('plugins')
+require('nvim_monokai')
+require('nvim_alpha')
+require('nvimtree')
+require('nvimlspconfig')
+require('nvimmason')
+require('nvimcmp')
+require('rust-tools-configuration')
+require('evil_lualine')
+require('nvimtreesitter')

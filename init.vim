@@ -400,17 +400,6 @@ let g:rustfmt_autosave = 1
 let g:rust_cargo_use_clippy = 1
 " need FiraCode font-family
 lua << END
---vim.cmd[[colorscheme tokyonight]]
---require('tokyonight')
-require('plugins')
-require('nvim_monokai')
-require('nvim_alpha')
-require('nvimtree')
-require('nvimlspconfig')
-require('nvimmason')
-require('nvimcmp')
-require('rust-tools-configuration')
-require('evil_lualine')
-require('nvimtreesitter')
+require('init')
 END
 
