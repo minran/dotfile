@@ -1,6 +1,7 @@
 ### 2022-11-15 二 10:30:17 
 - add monokai theme
 - add nvim-treesitter-textobjects plugin
+- add init.lua
 
 
 ### 2022-11-14 一 23:39:15  
