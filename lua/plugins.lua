@@ -78,5 +78,8 @@ return require('packer').startup(function(use)
   if vim.g.is_mac then
     use { "hrsh7th/cmp-emoji", after = "nvim-cmp" }
   end
+
+  -- lspkind icon
+  use 'mortepau/codicons.nvim'
 end)
 

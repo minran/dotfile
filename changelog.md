@@ -1,3 +1,7 @@
+
+### 2022-11-19 六 21:37:19  
+- add mortepau/codicons.nvim plugin 
+
 ### 2022-11-15 二 10:30:17 
 - add monokai theme
 - add nvim-treesitter-textobjects plugin

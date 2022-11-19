@@ -1,7 +1,6 @@
 -- Setup nvim-cmp.
 local cmp = require("cmp")
 local lspkind = require("lspkind")
-
 cmp.setup({
   snippet = {
     expand = function(args)
@@ -46,18 +45,29 @@ cmp.setup({
     entries = "custom",
   },
   formatting = {
-    format = lspkind.cmp_format {
-      mode = "symbol_text",
-      menu = {
-        nvim_lsp = "[LSP]",
-        ultisnips = "[US]",
-        nvim_lua = "[Lua]",
-        path = "[Path]",
-        buffer = "[Buffer]",
-        emoji = "[Emoji]",
-        omni = "[Omni]",
-      },
+    fields = {
+      cmp.ItemField.Kind,
+      cmp.ItemField.Abbr,
+      cmp.ItemField.Menu,
     },
+    format = function(entry, vim_item)
+      local kind = lspkind.cmp_format({
+        mode = "symbol_text",
+        menu = {
+          nvim_lsp = "[LSP]",
+          ultisnips = "[US]",
+          nvim_lua = "[Lua]",
+          path = "[Path]",
+          buffer = "[Buffer]",
+          emoji = "[Emoji]",
+          omni = "[Omni]",
+        },
+      })(entry, vim_item)
+      local strings = vim.split(kind.kind, "%s", { trimempty = true })
+      kind.kind = " " .. strings[1] .. " "
+      kind.menu = "    (" .. strings[2] .. ")"
+      return kind
+    end,
   },
 })
 
@@ -81,3 +91,4 @@ vim.cmd([[
   highlight! CmpItemKindProperty guibg=NONE guifg=#D4D4D4
   highlight! CmpItemKindUnit guibg=NONE guifg=#D4D4D4
 ]])
+
