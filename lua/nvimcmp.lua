@@ -63,9 +63,9 @@ cmp.setup({
           omni = "[Omni]",
         },
       })(entry, vim_item)
-      local strings = vim.split(kind.kind, "%s", { trimempty = true })
-      kind.kind = " " .. strings[1] .. " "
-      kind.menu = "    (" .. strings[2] .. ")"
+      --local strings = vim.split(kind.kind, "%s", { trimempty = true })
+      --kind.kind = " " .. strings[1] .. " "
+      --kind.menu = "    (" .. strings[2] .. ")"
       return kind
     end,
   },
