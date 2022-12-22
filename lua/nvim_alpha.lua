@@ -15,11 +15,13 @@ dashboard.section.header.val = {
 
 -- Set menu
 dashboard.section.buttons.val = {
-    dashboard.button( "e", "  > New file" , ":ene <BAR> startinsert <CR>"),
-    dashboard.button( "f", "  > Find file", ":cd $HOME/Workspace | Telescope find_files<CR>"),
+    dashboard.button( "f", "  > Find File", "<CMD>Telescope find_files<CR>"),
+    dashboard.button( "n", "  > New File" , "<CMD>ene!<CR>"),
     dashboard.button( "r", "  > Recent"   , ":Telescope oldfiles<CR>"),
+    dashboard.button( "t", "  > Find Text", "<CMD>Telescope live_grep<CR>"),
     dashboard.button( "s", "  > Settings" , ":e $MYVIMRC | :cd %:p:h | split . | wincmd k | pwd<CR>"),
     dashboard.button( "q", "  > Quit NVIM", ":qa<CR>"),
+
 }
 
 -- Set footer
