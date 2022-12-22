@@ -41,7 +41,8 @@ return require('packer').startup(function(use)
 
   use 'neovim/nvim-lspconfig'
 
-  use 'nvim-treesitter/nvim-treesitter'
+  -- {'do': ':TSUpdate'}
+  use {'nvim-treesitter/nvim-treesitter'}
 
   use {'nvim-treesitter/nvim-treesitter-textobjects'}
 
@@ -81,5 +82,7 @@ return require('packer').startup(function(use)
 
   -- lspkind icon
   use 'mortepau/codicons.nvim'
+
+  use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
 end)
 
