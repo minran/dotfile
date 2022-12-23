@@ -5,10 +5,6 @@ return require('packer').startup(function(use)
 
   use 'nvim-lua/plenary.nvim'
 
-  use { 'nvim-lua/popup.nvim', disable = true }
-
-  use { 'MunifTanjim/nui.nvim', disable = true }
-
   use {
     'nvim-tree/nvim-web-devicons',
   }
@@ -17,32 +13,22 @@ return require('packer').startup(function(use)
     'goolord/alpha-nvim',
   }
 
-  use{
-    "glepnir/lspsaga.nvim",
-    disable = true,
-    branch = "main",
-    config = function()
-        local saga = require("lspsaga")
-
-        saga.init_lsp_saga({
-            -- your configuration
-        })
-    end,
-  }
-
   use {
     'tanvirtin/monokai.nvim',
   }
 
   use {
     'folke/tokyonight.nvim',
-    disable = true
+  }
+
+  use {
+  'nvim-telescope/telescope.nvim', tag = '0.1.0',
+  -- or                            , branch = '0.1.x',
   }
 
   use 'neovim/nvim-lspconfig'
 
-  -- {'do': ':TSUpdate'}
-  use {'nvim-treesitter/nvim-treesitter'}
+  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate', }
 
   use {'nvim-treesitter/nvim-treesitter-textobjects'}
 
@@ -84,5 +70,6 @@ return require('packer').startup(function(use)
   use 'mortepau/codicons.nvim'
 
   use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
+
 end)
 
