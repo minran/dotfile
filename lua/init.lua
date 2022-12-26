@@ -3,6 +3,9 @@ require("plugin_config")
 
 vim.cmd[[colorscheme tokyonight]]
 
+vim.cmd('syntax on')
+vim.cmd('filetype plugin indent on')
+
 local set = vim.opt
 
 set.hidden = true
@@ -36,7 +39,6 @@ set.foldlevelstart=99
 -- }
 
 set.ruler = true               -- 打开状态栏标尺
---set.syntax = "on"              -- 自动语法高亮
 set.hlsearch = true            -- 搜索时高亮显示被找到的文本
 set.showmatch = true
 set.cursorline = true          -- 高亮当前行
