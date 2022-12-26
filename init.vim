@@ -12,6 +12,7 @@ Plug 'nvim-lualine/lualine.nvim'
 
 " neovim 快速跳转插件
 Plug 'Lokaltog/vim-easymotion'
+" 替换插件 Leap.nvim
 " 标签
 Plug 'mattesgroeger/vim-bookmarks'
 " 启动页
@@ -21,9 +22,10 @@ Plug 'mattesgroeger/vim-bookmarks'
 "Plug 'airblade/vim-gitgutter'
 " 改变包围结构
 Plug 'anyakichi/vim-surround'
+" 注释插件
 Plug 'scrooloose/nerdcommenter'
-Plug 'jparise/vim-graphql'
-Plug 'google/vim-colorscheme-primary'
+"Plug 'jparise/vim-graphql'
+"Plug 'google/vim-colorscheme-primary'
 
 " wiki
 Plug 'vimwiki/vimwiki'
