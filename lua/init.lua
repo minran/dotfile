@@ -40,7 +40,7 @@ set.ruler = true               -- 打开状态栏标尺
 set.hlsearch = true            -- 搜索时高亮显示被找到的文本
 --set.showmatch = true
 set.cursorline = true          -- 高亮当前行
-set.backup = true 		         -- 不创建备份文件			
+--set.backup = true 		         -- 不创建备份文件			
 set.infercase = true           -- 区分大小写
 
 
