@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/Users/momo/.local/share/nvim/site/pack/packer/start/alpha-nvim",
     url = "https://github.com/goolord/alpha-nvim"
   },
+  ["bufferline.nvim"] = {
+    loaded = true,
+    path = "/Users/momo/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
+    url = "https://github.com/akinsho/bufferline.nvim"
+  },
   ["cmp-buffer"] = {
     after_files = { "/Users/momo/.local/share/nvim/site/pack/packer/opt/cmp-buffer/after/plugin/cmp_buffer.lua" },
     load_after = {},
@@ -123,6 +128,11 @@ _G.packer_plugins = {
     needs_bufread = false,
     path = "/Users/momo/.local/share/nvim/site/pack/packer/opt/cmp-vsnip",
     url = "https://github.com/hrsh7th/cmp-vsnip"
+  },
+  ["codicons.nvim"] = {
+    loaded = true,
+    path = "/Users/momo/.local/share/nvim/site/pack/packer/start/codicons.nvim",
+    url = "https://github.com/mortepau/codicons.nvim"
   },
   ["lspkind-nvim"] = {
     loaded = true,
@@ -194,6 +204,16 @@ _G.packer_plugins = {
     path = "/Users/momo/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
     url = "https://github.com/simrat39/rust-tools.nvim"
   },
+  ["telescope.nvim"] = {
+    loaded = true,
+    path = "/Users/momo/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["tokyonight.nvim"] = {
+    loaded = true,
+    path = "/Users/momo/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
+    url = "https://github.com/folke/tokyonight.nvim"
+  },
   ultisnips = {
     loaded = true,
     path = "/Users/momo/.local/share/nvim/site/pack/packer/start/ultisnips",
@@ -205,11 +225,11 @@ time([[Defining packer_plugins]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
 vim.cmd [[ packadd nvim-cmp ]]
-vim.cmd [[ packadd cmp-buffer ]]
-vim.cmd [[ packadd cmp-omni ]]
-vim.cmd [[ packadd cmp-nvim-lsp ]]
 vim.cmd [[ packadd cmp-vsnip ]]
+vim.cmd [[ packadd cmp-omni ]]
 vim.cmd [[ packadd cmp-path ]]
+vim.cmd [[ packadd cmp-buffer ]]
+vim.cmd [[ packadd cmp-nvim-lsp ]]
 time([[Sequenced loading]], false)
 
 _G._packer.inside_compile = false
