@@ -1,5 +1,6 @@
 require("plugins")
 require("plugin_config")
+require('keybinding')
 
 vim.cmd[[colorscheme tokyonight]]
 
@@ -45,5 +46,4 @@ set.infercase = true           -- 区分大小写
 
 set.background="dark" -- 黑色
 
-require('keybinding')
 

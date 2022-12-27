@@ -1,5 +1,5 @@
-require('config.nvimlspconfig')
 require('config.nvimcmp')
+require('config.nvimlspconfig')
 require('config.nvim_alpha')
 require('config.nvimtree')
 require('config.nvimmason')

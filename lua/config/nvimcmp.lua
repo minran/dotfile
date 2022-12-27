@@ -1,16 +1,15 @@
 -- Setup nvim-cmp.
 local cmp = require("cmp")
 local lspkind = require("lspkind")
-vim.opt.completeopt = {'menu', 'menuone', 'noselect', 'noinsert'}
 
-cmp.setup({
-  
+cmp.setup {
   snippet = {
     expand = function(args)
       -- For `ultisnips` user.
       vim.fn["UltiSnips#Anon"](args.body)
     end,
   },
+  
   window = {
     completion = cmp.config.window.bordered(),
     documentation = cmp.config.window.bordered(),
@@ -41,16 +40,11 @@ cmp.setup({
     { name = "ultisnips" }, -- For ultisnips user.
     { name = "path" }, -- for path completion
     { name = "buffer", keyword_length = 2 }, -- for buffer word completion
-    { name = "omni" },
     { name = "emoji", insert = true }, -- emoji completion
   },
   completion = {
     keyword_length = 1,
-    completeopt = "menu,noselect, menuone, noinsert",
-  },
-  confirm_opts = {
-    behavior = cmp.ConfirmBehavior.Replace,
-    select = false,
+    completeopt = "menu,noselect",
   },
   view = {
     entries = "custom",
@@ -61,24 +55,27 @@ cmp.setup({
       cmp.ItemField.Abbr,
       cmp.ItemField.Menu,
     },
-    format = function(entry, vim_item)
-      local kind = lspkind.cmp_format({
-        mode = "symbol_text",
-        menu = {
-          nvim_lsp = "[LSP]",
-          ultisnips = "[US]",
-          nvim_lua = "[Lua]",
-          path = "[Path]",
-          buffer = "[Buffer]",
-          emoji = "[Emoji]",
-          omni = "[Omni]",
-        },
-      })(entry, vim_item)
-      --local strings = vim.split(kind.kind, "%s", { trimempty = true })
-      --kind.kind = " " .. strings[1] .. " "
-      --kind.menu = "    (" .. strings[2] .. ")"
-      return kind
-    end,
+    format = lspkind.cmp_format {
+      mode = "symbol_text",
+      menu = {
+        nvim_lsp = "[LSP]",
+        ultisnips = "[US]",
+        nvim_lua = "[Lua]",
+        path = "[Path]",
+        buffer = "[Buffer]",
+        emoji = "[Emoji]",
+        omni = "[Omni]",
+      },
+    },
+  },
+}
+
+cmp.setup.filetype("tex", {
+  sources = {
+    { name = "omni" },
+    { name = "ultisnips" }, -- For ultisnips user.
+    { name = "buffer", keyword_length = 2 }, -- for buffer word completion
+    { name = "path" }, -- for path completion
   },
 })
 
@@ -102,4 +99,3 @@ vim.cmd([[
   highlight! CmpItemKindProperty guibg=NONE guifg=#D4D4D4
   highlight! CmpItemKindUnit guibg=NONE guifg=#D4D4D4
 ]])
-
