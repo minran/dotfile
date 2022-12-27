@@ -17,9 +17,6 @@ set.shiftwidth=2
 set.autoindent = true --自动缩进
 set.copyindent = true --复制保持原来的缩进
 set.smartindent = true
---默认选择第一个提示
-set.completeopt="menu"
-
 set.expandtab = true
 -- if macunix{
 -- 开始折叠
@@ -40,7 +37,7 @@ set.foldlevelstart=99
 
 set.ruler = true               -- 打开状态栏标尺
 set.hlsearch = true            -- 搜索时高亮显示被找到的文本
-set.showmatch = true
+--set.showmatch = true
 set.cursorline = true          -- 高亮当前行
 set.backup = true 		         -- 不创建备份文件			
 set.infercase = true           -- 区分大小写

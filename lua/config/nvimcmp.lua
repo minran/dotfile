@@ -1,12 +1,19 @@
 -- Setup nvim-cmp.
 local cmp = require("cmp")
 local lspkind = require("lspkind")
+vim.opt.completeopt = {'menu', 'menuone', 'noselect', 'noinsert'}
+
 cmp.setup({
+  
   snippet = {
     expand = function(args)
       -- For `ultisnips` user.
       vim.fn["UltiSnips#Anon"](args.body)
     end,
+  },
+  window = {
+    completion = cmp.config.window.bordered(),
+    documentation = cmp.config.window.bordered(),
   },
   mapping = cmp.mapping.preset.insert {
     ["<Tab>"] = function(fallback)
@@ -39,7 +46,11 @@ cmp.setup({
   },
   completion = {
     keyword_length = 1,
-    completeopt = "menu,noselect",
+    completeopt = "menu,noselect, menuone, noinsert",
+  },
+  confirm_opts = {
+    behavior = cmp.ConfirmBehavior.Replace,
+    select = false,
   },
   view = {
     entries = "custom",
