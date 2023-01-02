@@ -2,7 +2,8 @@ require("plugins")
 require("plugin_config")
 require('keybinding')
 
-vim.cmd[[colorscheme tokyonight]]
+--vim.cmd[[colorscheme tokyonight]]
+vim.cmd[[colorscheme monokai]]
 
 vim.cmd('syntax on')
 vim.cmd('filetype plugin indent on')
