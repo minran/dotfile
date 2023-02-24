@@ -32,20 +32,42 @@ local conditions = {
     return gitdir and #gitdir > 0 and #gitdir < #filepath
   end,
 }
+local slanted_gaps = {
+  red = '#ca1243',
+  grey = '#a0a1a7',
+  black = '#383a42',
+  white = '#f3f3f3',
+  light_green = '#83a598',
+  orange = '#fe8019',
+  green = '#8ec07c',
+}
 
+local slanted_gaps_theme = {
+  normal = {
+    a = { fg = slanted_gaps.white, bg = slanted_gaps.black },
+    b = { fg = slanted_gaps.white, bg = slanted_gaps.grey },
+    c = { fg = slanted_gaps.black, bg = slanted_gaps.white },
+    z = { fg = slanted_gaps.white, bg = slanted_gaps.black },
+  },
+  insert = { a = { fg = slanted_gaps.black, bg = slanted_gaps.light_green } },
+  visual = { a = { fg = slanted_gaps.black, bg = slanted_gaps.orange } },
+  replace = { a = { fg = slanted_gaps.black, bg = slanted_gaps.green } },
+}
 -- Config
 local config = {
   options = {
     -- Disable sections and component separators
     component_separators = '',
     section_separators = '',
-    theme = {
+    theme = 'onelight', 
+    --theme = 'tokyonight', 
+    --theme = {
       -- We are going to use lualine_c an lualine_x as left and
       -- right section. Both are highlighted by c theme .  So we
       -- are just setting default looks o statusline
-      normal = { c = { fg = colors.fg, bg = colors.bg } },
-      inactive = { c = { fg = colors.fg, bg = colors.bg } },
-    },
+      -- normal = { c = { fg = colors.fg, bg = colors.bg } },
+      -- inactive = { c = { fg = colors.fg, bg = colors.bg } },
+    --},
   },
   sections = {
     -- these are to remove the defaults

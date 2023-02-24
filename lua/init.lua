@@ -2,8 +2,9 @@ require("plugins")
 require("plugin_config")
 require('keybinding')
 
+vim.cmd[[colorscheme onelight]]
 --vim.cmd[[colorscheme tokyonight]]
-vim.cmd[[colorscheme monokai]]
+--vim.cmd[[colorscheme monokai]]
 
 vim.cmd('syntax on')
 vim.cmd('filetype plugin indent on')
@@ -41,10 +42,11 @@ set.ruler = true               -- 打开状态栏标尺
 set.hlsearch = true            -- 搜索时高亮显示被找到的文本
 --set.showmatch = true
 set.cursorline = true          -- 高亮当前行
---set.backup = true 		         -- 不创建备份文件			
+set.backup = true 		         -- 不创建备份文件			
 set.infercase = true           -- 区分大小写
 
 
-set.background="dark" -- 黑色
+-- set.background="dark" -- 黑色
+set.background="light" -- 白色
 
 
