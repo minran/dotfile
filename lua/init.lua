@@ -2,8 +2,8 @@ require("plugins")
 require("plugin_config")
 require('keybinding')
 
-vim.cmd[[colorscheme onelight]]
---vim.cmd[[colorscheme tokyonight]]
+--vim.cmd[[colorscheme onelight]]
+vim.cmd[[colorscheme tokyonight]]
 --vim.cmd[[colorscheme monokai]]
 
 vim.cmd('syntax on')
@@ -46,7 +46,7 @@ set.backup = true 		         -- 不创建备份文件
 set.infercase = true           -- 区分大小写
 
 
--- set.background="dark" -- 黑色
-set.background="light" -- 白色
+set.background="dark" -- 黑色
+--set.background="light" -- 白色
 
 
