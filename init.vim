@@ -1,5 +1,8 @@
 let mapleader = ','
-
+set nobackup "表示不需要备份文件
+set noswapfile "表示不创建临时交换文件
+set nowritebackup "表示编辑的时候不需要备份文件
+set noundofile "表示不创建撤销文件
 call plug#begin('~/.config/plugin')
 
 " 全局搜索插件 Ack'
