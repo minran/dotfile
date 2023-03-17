@@ -1,30 +1,84 @@
-require('telescope').setup{
+local status, telescope = pcall(require, "telescope")
+if not status then
+  vim.notify("没有找到 telescope")
+  return
+end
+
+local previewers = require("telescope.previewers")
+local Job = require("plenary.job")
+local new_maker = function(filepath, bufnr, opts)
+  filepath = vim.fn.expand(filepath)
+  Job:new({
+    command = "file",
+    args = { "--mime-type", "-b", filepath },
+    on_exit = function(j)
+      local mime_type = vim.split(j:result()[1], "/")[1]
+      if mime_type == "text" then
+        previewers.buffer_previewer_maker(filepath, bufnr, opts)
+      else
+        -- maybe we want to write something to the buffer here
+        vim.schedule(function()
+          vim.api.nvim_buf_set_lines(bufnr, 0, -1, false, { "BINARY" })
+        end)
+      end
+    end
+  }):sync()
+end
+
+local actions = require("telescope.actions")
+telescope.setup({
   defaults = {
-    -- Default configuration for telescope goes here:
-    -- config_key = value,
+    -- 打开弹窗后进入的初始模式，默认为 insert，也可以是 normal
+    initial_mode = "insert",
+
+    layout_config = { width = 0.98, 
+    preview_cutoff = 1
+    },
+    -- vertical , center , cursor
+    --layout_strategy = "horizontal",
+    -- 窗口内快捷键
+    -- mappings = require("keybindings").telescopeList,
     mappings = {
       i = {
-        -- map actions.which_key to <C-h> (default: <C-/>)
-        -- actions.which_key shows the mappings for your picker,
-        -- e.g. git_{create, delete, ...}_branch for the git_branches picker
-        ["<C-h>"] = "which_key"
-      }
+        -- 上下移动
+        ['<C-j>'] = 'move_selection_next',
+        ['<C-k>'] = 'move_selection_previous',
+        ['<C-n>'] = 'move_selection_next',
+        ['<C-p>'] = 'move_selection_previous',
+        -- 历史记录
+        ['<Down>'] = 'cycle_history_next',
+        ['<Up>'] = 'cycle_history_prev',
+        -- 关闭窗口
+        -- ["<esc>"] = actions.close,
+        ['<C-c>'] = 'close',
+        -- 预览窗口上下滚动
+        ['<C-u>'] = 'preview_scrolling_up',
+        ['<C-d>'] = 'preview_scrolling_down',
+      },
     }
   },
   pickers = {
-    -- Default configuration for builtin pickers goes here:
-    -- picker_name = {
-    --   picker_config_key = value,
-    --   ...
-    -- }
-    -- Now the picker_config_key will be applied every time you call this
-    -- builtin picker
+    
+    find_files = {
+      --theme = "dropdown", -- 可选参数： dropdown, cursor, ivy
+      preview = true,
+    },
+    live_grep = {
+      theme = "ivy",
+      preview = true,
+    }
   },
   extensions = {
-    -- Your extension configuration goes here:
-    -- extension_name = {
-    --   extension_config_key = value,
-    -- }
-    -- please take a look at the readme of the extension you want to configure
-  }
-}
+    ["ui-select"] = {
+      require("telescope.themes").get_dropdown({
+        -- even more opts
+      }),
+    },
+  },
+})
+
+--pcall(telescope.load_extension, "env")
+-- To get ui-select loaded and working with telescope, you need to call
+-- load_extension, somewhere after setup function:
+--pcall(telescope.load_extension, "ui-select")ile
+telescope.load_extension("live_grep_args")
