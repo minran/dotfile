@@ -21,10 +21,17 @@ return require('packer').startup(function(use)
     'folke/tokyonight.nvim',
   }
 
+  -- telescope
   use {
   'nvim-telescope/telescope.nvim', tag = '0.1.0',
   -- or                            , branch = '0.1.x',
   }
+  use{ "nvim-telescope/telescope-live-grep-args.nvim", }
+  use{ "nvim-telescope/telescope-live-grep-raw.nvim", }
+  use{ "LinArcX/telescope-env.nvim", }
+  use{ "nvim-telescope/telescope-ui-select.nvim", }
+  use{ "nvim-telescope/telescope-rg.nvim", }
+  use{ "nvim-telescope/telescope-dap.nvim", }
 
   use 'neovim/nvim-lspconfig'
 
