@@ -14,13 +14,7 @@ local set = vim.opt
 set.hidden = true
 set.number = true
 set.encoding="UTF-8"
-set.tabstop=2
-set.softtabstop=2
-set.shiftwidth=2
-set.autoindent = true --自动缩进
-set.copyindent = true --复制保持原来的缩进
-set.smartindent = true
-set.expandtab = true
+
 -- if macunix{
 -- 开始折叠
 set.foldenable = true;
@@ -42,11 +36,30 @@ set.ruler = true               -- 打开状态栏标尺
 set.hlsearch = true            -- 搜索时高亮显示被找到的文本
 --set.showmatch = true
 set.cursorline = true          -- 高亮当前行
-set.backup = true 		         -- 不创建备份文件			
-set.infercase = true           -- 区分大小写
-
 
 set.background="dark" -- 黑色
 --set.background="light" -- 白色
 
+-- 缩进2个空格等于一个Tab
+vim.o.tabstop = 2
+vim.bo.tabstop = 2
+vim.o.softtabstop = 2
+vim.o.shiftround = true
+-- >> << 时移动长度
+vim.o.shiftwidth = 2
+vim.bo.shiftwidth = 2
+-- 空格替代tab
+vim.o.expandtab = true
+vim.bo.expandtab = true
+-- 新行对齐当前行
+vim.o.autoindent = true
+vim.bo.autoindent = true
+vim.o.smartindent = true
+-- 搜索大小写不敏感，除非包含大写
+vim.o.ignorecase = true
+vim.o.smartcase = true
+-- 禁止创建备份文件
+vim.o.backup = false
+vim.o.writebackup = false
+vim.o.swapfile = false
 
