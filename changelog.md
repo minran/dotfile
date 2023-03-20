@@ -1,3 +1,9 @@
+### 2023-03-20 一 10:53:45 
+增加弹窗和提示插件
+- "rcarriga/nvim-notify",
+- "MunifTanjim/nui.nvim",
+- "folke/noice.nvim",
+
 ### 2022-12-23 五 17:17:42
 - floder classification(文件夹分类)
 

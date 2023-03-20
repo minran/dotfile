@@ -4,7 +4,19 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   use 'nvim-lua/plenary.nvim'
+  ------------------ 弹窗窗口 -----------------
+  use {
+    'rcarriga/nvim-notify'
+  }
+  use {
+    'MunifTanjim/nui.nvim',
+  }
 
+  use {
+    'folke/noice.nvim',
+  }
+
+  -- 图标
   use {
     'nvim-tree/nvim-web-devicons',
   }
@@ -13,6 +25,7 @@ return require('packer').startup(function(use)
     'goolord/alpha-nvim',
   }
 
+  -- 主题
   use {
     'tanvirtin/monokai.nvim',
   }
@@ -21,10 +34,14 @@ return require('packer').startup(function(use)
     'folke/tokyonight.nvim',
   }
 
+  use {
+    'olimorris/onedarkpro.nvim'
+  }
+
   -- telescope
   use {
-  'nvim-telescope/telescope.nvim', tag = '0.1.0',
-  -- or                            , branch = '0.1.x',
+    'nvim-telescope/telescope.nvim', tag = '0.1.0',
+    -- or                            , branch = '0.1.x',
   }
   use{ "nvim-telescope/telescope-live-grep-args.nvim", }
   use{ "nvim-telescope/telescope-live-grep-raw.nvim", }
@@ -81,7 +98,6 @@ return require('packer').startup(function(use)
 
   use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
 
-  use {"olimorris/onedarkpro.nvim"}
 
   use {
     'lewis6991/gitsigns.nvim',
