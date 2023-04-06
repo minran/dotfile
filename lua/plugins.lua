@@ -38,6 +38,10 @@ return require('packer').startup(function(use)
     'olimorris/onedarkpro.nvim'
   }
 
+  use {
+    'sainnhe/sonokai'
+  }
+
   -- telescope
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
