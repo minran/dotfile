@@ -4,6 +4,18 @@ local extension_path = vim.env.HOME .. '/.vscode/extensions/vadimcn.vscode-lldb-
 local codelldb_path = extension_path .. 'adapter/codelldb'
 local liblldb_path = extension_path .. 'lldb/lib/liblldb.so'
 local opts = {
+  tools = {
+    runnables = {
+      use_telescope = true,
+    },
+    inlay_hints = {
+      auto = true,
+      show_parameter_hints = false,
+      parameter_hints_prefix = "",
+      other_hints_prefix = "",
+    },
+  },
+
   server = {
     on_attach = function(_, bufnr)
       -- Hover actions
@@ -26,10 +38,20 @@ local opts = {
       keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
       keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
     end,
+    settings = {
+      -- to enable rust-analyzer settings visit:
+      -- https://github.com/rust-analyzer/rust-analyzer/blob/master/docs/user/generated_config.adoc
+      ["rust-analyzer"] = {
+        -- enable clippy on save
+        checkOnSave = {
+          command = "clippy",
+        },
+      },
+    },
   },
   dap = {
     adapter = require('rust-tools.dap').get_codelldb_adapter(
-        codelldb_path, liblldb_path)
+    codelldb_path, liblldb_path)
   }
 }
 rt.setup(opts)
