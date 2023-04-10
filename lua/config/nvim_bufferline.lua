@@ -3,9 +3,21 @@ if not status then
   vim.notify("没有找到 bufferline")
   return
 end
+vim.opt.termguicolors = true
 -- bfferline 配置
 bufferline.setup({
   options = {
+    indicator = {
+      style = 'icon',
+      icon = "▎",
+    },
+    buffer_close_icon = "",
+    -- buffer_close_icon = '',
+    modified_icon = "●",
+    close_icon = "",
+    -- close_icon = '',
+    left_trunc_marker = " ",
+    right_trunc_marker = " ",
     -- 关闭 Tab 的命令
     close_command = "bdelete! %d",
     right_mouse_command = "bdelete! %d",
