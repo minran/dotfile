@@ -42,6 +42,10 @@ return require('packer').startup(function(use)
     'sainnhe/sonokai'
   }
 
+  use {
+    'Mofiqul/vscode.nvim'
+  }
+
   -- telescope
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',

@@ -2,10 +2,11 @@ require("plugins")
 require("plugin_config")
 require('keybinding')
 
+vim.cmd[[colorscheme vscode]]
 --vim.cmd[[colorscheme onelight]]
 --vim.cmd[[colorscheme tokyonight]]
 --vim.cmd[[colorscheme monokai]]
-vim.cmd[[colorscheme sonokai]]
+--vim.cmd[[colorscheme sonokai]]
 
 vim.cmd('syntax on')
 vim.cmd('filetype plugin indent on')
@@ -38,8 +39,8 @@ set.hlsearch = true            -- 搜索时高亮显示被找到的文本
 --set.showmatch = true
 set.cursorline = true          -- 高亮当前行
 
-set.background="dark" -- 黑色
---set.background="light" -- 白色
+--set.background="dark" -- 黑色
+set.background="light" -- 白色
 
 -- 缩进2个空格等于一个Tab
 vim.o.tabstop = 2
