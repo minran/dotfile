@@ -2,6 +2,7 @@ require("plugins")
 require("plugin_config")
 require('keybinding')
 
+vim.o.termguicolors = true
 --vim.cmd[[colorscheme onelight]]
 --vim.cmd[[colorscheme tokyonight]]
 --vim.cmd[[colorscheme monokai]]
