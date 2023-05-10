@@ -1,3 +1,7 @@
+### 2023-05-10 三 18:46:55 
+- 修改 bufferline 图标
+- iterm2 font 修改为 jetbrainsmono
+ 
 ### 2023-05-08 一 10:49:00
 - 增加vscode主题
 - 增加lua-light分支
