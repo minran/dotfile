@@ -47,10 +47,10 @@ require('lspconfig')['yamlls'].setup {
   flags = lsp_flags,
 }
 
-require('lspconfig')['sumneko_lua'].setup {
-  on_attach = on_attach,
-  flags = lsp_flags,
-}
+--[[require('lspconfig')['sumneko_lua'].setup {]]
+  --[[on_attach = on_attach,]]
+  --[[flags = lsp_flags,]]
+--[[}]]
 
 require('lspconfig')['volar'].setup {
   on_attach = on_attach,
