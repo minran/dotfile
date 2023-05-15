@@ -47,6 +47,23 @@ require('lspconfig')['yamlls'].setup {
   flags = lsp_flags,
 }
 
+require('lspconfig')['lua_ls'].setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+  settings = {
+    Lua = {
+      diagnostics = {
+        globals = { "vim" },
+      },
+      workspace = {
+        library = {
+          [vim.fn.expand("$VIMRUNTIME/lua")] = true,
+        },
+      },
+    },
+  },
+})
+
 --[[require('lspconfig')['sumneko_lua'].setup {]]
   --[[on_attach = on_attach,]]
   --[[flags = lsp_flags,]]
