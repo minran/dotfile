@@ -21,10 +21,14 @@ require("lazy").setup({
     'rcarriga/nvim-notify',
   },
   {
-    'MunifTanjim/nui.nvim',
+    "folke/noice.nvim",
+      enabled = true,
+      lazy = true,
+      event = { "BufRead", "BufNewFile" },
+      dependencies = { "rcarriga/nvim-notify", "MunifTanjim/nui.nvim" },
   },
   {
-    'folke/noice.nvim',
+    'MunifTanjim/nui.nvim',
   },
   ------------------ 图标 -----------------
   {
@@ -64,9 +68,8 @@ require("lazy").setup({
   {'neovim/nvim-lspconfig'},
   {
     'nvim-treesitter/nvim-treesitter',
-    --run = ':TSUpdate',
+    build = ':TSUpdate',
   },
-  {'nvim-treesitter/nvim-treesitter-textobjects'},
   {"williamboman/mason.nvim"},
   {"williamboman/mason-lspconfig.nvim"},
 
