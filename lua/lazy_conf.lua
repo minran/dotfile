@@ -143,4 +143,10 @@ require("lazy").setup({
   
   ------------------ 注释插件 -----------------
   -- TODO 
+
+  ------------------ 刷题插件 -----------------
+  {
+    'xeluxee/competitest.nvim',
+    dependencies = 'MunifTanjim/nui.nvim',
+  }
 })
