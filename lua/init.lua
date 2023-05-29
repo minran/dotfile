@@ -1,4 +1,5 @@
-require("plugins")
+require("lazy_conf")
+--require("plugins")
 require("plugin_config")
 require('keybinding')
 

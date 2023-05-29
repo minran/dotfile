@@ -11,7 +11,7 @@ Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 
 "lualine
-Plug 'nvim-lualine/lualine.nvim'
+"Plug 'nvim-lualine/lualine.nvim'
 
 " neovim 快速跳转插件
 Plug 'Lokaltog/vim-easymotion'

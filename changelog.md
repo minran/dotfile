@@ -1,3 +1,7 @@
+### 2023-05-29 一 16:10:08 
+- 修改插件管理方式 packer to lazy
+- 增加taglist插件
+
 ### 2023-05-10 三 18:46:55 
 - 修改 bufferline 图标
 - iterm2 font 修改为 jetbrainsmono
