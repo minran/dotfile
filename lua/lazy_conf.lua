@@ -106,6 +106,8 @@ require("lazy").setup({
     -- tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
   },
 
+  ------------------ new plug -----------------
+  
   ------------------ taglist -----------------
   {
     'stevearc/aerial.nvim',
@@ -115,5 +117,28 @@ require("lazy").setup({
       "nvim-treesitter/nvim-treesitter",
       "nvim-tree/nvim-web-devicons"
     },
-  }
+  },
+
+  ------------------ 全局搜索插件 Ack -----------------
+  { 'wincent/ferret' },
+  { 'junegunn/fzf' },
+  { 'junegunn/fzf.vim' },
+  
+  ------------------ 改变包围结构插件 -----------------
+  {
+    "kylechui/nvim-surround",
+    version = "*", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
+  },
+
+  ------------------ 快速跳转插件 -----------------
+  {
+
+    "phaazon/leap.nvim",
+
+    lazy = true,
+
+    event = "BufReadPost",
+  },
+  
 })

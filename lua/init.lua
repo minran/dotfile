@@ -1,7 +1,7 @@
 require("lazy_conf")
+require('keybinding')
 --require("plugins")
 require("plugin_config")
-require('keybinding')
 
 vim.o.termguicolors = true
 vim.cmd[[colorscheme vscode]]

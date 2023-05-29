@@ -1,5 +1,4 @@
 vim.g.mapleader = ","
-
 local opt = {
   noremap = true,
   silent = true,
@@ -68,3 +67,6 @@ vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
+-- ferret
+vim.keymap.set('n', '<Leader>x', '<Plug>(FerretAck)', {})
+vim.keymap.set('n', '<Leader>z', '<Plug>(FerretAckWord)', {})
