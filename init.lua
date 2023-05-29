@@ -1,6 +1,6 @@
-require("lua.lazy_conf")
-require('lua.keybinding')
-require("lua.plugin_config")
+require("lazy_conf")
+require('keybinding')
+require("plugin_config")
 --require("plugins")
 
 vim.o.termguicolors = true
