@@ -83,7 +83,7 @@ require("lazy").setup({
     dependencies = { "nvim-treesitter/nvim-treesitter" },
   },
 
-  {"williamboman/mason.nvim"},
+  {"williamboman/mason.nvim", run = ":MasonUpdate"},
   {"williamboman/mason-lspconfig.nvim"},
 
   ------------------ rust-toos.nvim -----------------
