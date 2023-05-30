@@ -1,5 +1,6 @@
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
+local lspconfig = require('lspconfig')
 local opts = { noremap=true, silent=true }
 local keymap = vim.keymap
 vim.lsp.set_log_level("trace")
@@ -32,22 +33,28 @@ local on_attach = function(client, bufnr)
   keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
 end
 
+
 local lsp_flags = {
   -- This is the default in Nvim 0.7+
   debounce_text_changes = 150,
 }
 
-require('lspconfig')['solidity'].setup {
+lspconfig['clangd'].setup {
   on_attach = on_attach,
   flags = lsp_flags,
 }
 
-require('lspconfig')['yamlls'].setup {
+lspconfig['solidity'].setup {
   on_attach = on_attach,
   flags = lsp_flags,
 }
 
-require('lspconfig')['lua_ls'].setup({
+lspconfig['yamlls'].setup {
+  on_attach = on_attach,
+  flags = lsp_flags,
+}
+
+lspconfig['lua_ls'].setup({
   on_attach = on_attach,
   capabilities = capabilities,
   settings = {
@@ -69,12 +76,12 @@ require('lspconfig')['lua_ls'].setup({
   --[[flags = lsp_flags,]]
 --[[}]]
 
-require('lspconfig')['volar'].setup {
+lspconfig['volar'].setup {
   on_attach = on_attach,
   flags = lsp_flags,
 }
 
-require('lspconfig')['tsserver'].setup {
+lspconfig['tsserver'].setup {
   on_attach = on_attach,
   filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
   cmd = { "typescript-language-server", "--stdio" },

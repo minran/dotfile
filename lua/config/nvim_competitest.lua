@@ -21,7 +21,7 @@ api.nvim_create_autocmd(
         file_name = vim.fn.expand("%<"),
       }
       vim.schedule(function ()
-        print(vim.inspect(data))
+        --print(vim.inspect(data))
       end)
       keymap.set('n', 'rr', ':CompetiTestRun<CR>', opts)
       keymap.set('n', 'ra', ':CompetiTestAdd<CR>', opts)

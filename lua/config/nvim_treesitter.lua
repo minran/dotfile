@@ -1,4 +1,4 @@
-require("nvim-treesitter.install").prefer_git = true
+--require("nvim-treesitter.install").prefer_git = true
 -- Treesitter Plugin Setup 
 require'nvim-treesitter.configs'.setup {
   ensure_installed = { "cpp", "dot", "vim", "lua", "rust", "toml", "javascript", "typescript", "vue", "scss", "css", "html" },
