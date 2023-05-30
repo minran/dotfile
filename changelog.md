@@ -1,3 +1,11 @@
+### 2023-05-30 二 11:10:43   
+- 增加插件
+    - Comment.nvim 注释插件 
+    - nvim-ts-context-commentstring 注释插件
+    - nvim-treesitter-textsubjects 根据光标位置自动决定要选中什么textobject 
+    - symbols-outline.nvim 以右侧栏形式显示当前文件的大纲、标题、符号 
+    - flit.nvim leap增强插件
+    - repeat.nvim .操作符增强插件
 ### 2023-05-29 一 22:17:06  
 - 增加 noice.nvim 插件配置 配合 nvim-notify
 

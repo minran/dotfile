@@ -22,7 +22,20 @@ require'nvim-treesitter.configs'.setup {
     enable = true,
     extended_mode = true,
     max_file_lines = nil,
-  }
+  },
+  context_commentstring = {
+    enable = true,
+  },
+  textsubjects = {
+    enable = true,
+    prev_selection = ",",
+    keymaps = {
+      ["."] = "textsubjects-smart",
+      [";"] = "textsubjects-container-outer",
+      ["i;"] = "textsubjects-container-inner",
+    },
+  },
+
 }
 
 -- 开启 Folding

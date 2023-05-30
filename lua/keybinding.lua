@@ -70,3 +70,6 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 -- ferret
 vim.keymap.set('n', '<Leader>x', '<Plug>(FerretAck)', {})
 vim.keymap.set('n', '<Leader>z', '<Plug>(FerretAckWord)', {})
+
+-- symbols_outline
+map('n', '<leader>tt', ':SymbolsOutline<CR>', opt)

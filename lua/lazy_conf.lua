@@ -66,10 +66,23 @@ require("lazy").setup({
   { "nvim-telescope/telescope-rg.nvim", },
   { "nvim-telescope/telescope-dap.nvim", },
   {'neovim/nvim-lspconfig'},
+
+  ------------------ nvim-treesitter -----------------
   {
     'nvim-treesitter/nvim-treesitter',
-    build = ':TSUpdate',
+     dependencies = {
+      'JoosepAlviste/nvim-ts-context-commentstring',
+     },
+     build = ':TSUpdate',
   },
+  {
+    "RRethy/nvim-treesitter-textsubjects",
+    lazy = true,
+    event = { "User FileOpened" },
+    after = "nvim-treesitter",
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+  },
+
   {"williamboman/mason.nvim"},
   {"williamboman/mason-lspconfig.nvim"},
 
@@ -113,15 +126,11 @@ require("lazy").setup({
   
   ------------------ taglist -----------------
   {
-    'stevearc/aerial.nvim',
-    opts = {},
-    -- Optional dependencies
-    dependencies = {
-      "nvim-treesitter/nvim-treesitter",
-      "nvim-tree/nvim-web-devicons"
-    },
+    "simrat39/symbols-outline.nvim",
+    config=true,
+    lazy = true,
+    cmd = { "SymbolsOutline", "SymbolsOutlineOpen", "SymbolsOutlineClose" },
   },
-
   ------------------ 全局搜索插件 Ack -----------------
   { 'wincent/ferret' },
   { 'junegunn/fzf' },
@@ -140,13 +149,24 @@ require("lazy").setup({
     lazy = true,
     event = "BufReadPost",
   },
-  
+  {
+    "ggandor/flit.nvim",
+    lazy = true,
+    event = "BufReadPost",
+  },
+  {
+    "tpope/vim-repeat",
+    lazy = true,
+    keys = ".",
+  },
   ------------------ 注释插件 -----------------
-  -- TODO 
-
+  {
+    'numToStr/Comment.nvim',
+    lazy = true,
+  },
   ------------------ 刷题插件 -----------------
   {
     'xeluxee/competitest.nvim',
     dependencies = 'MunifTanjim/nui.nvim',
-  }
+  },
 })
