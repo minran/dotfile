@@ -211,7 +211,7 @@ nvim_tree.setup({
   sort_by = "name",
   update_cwd = false,
   -- new
-  create_in_closed_folder = true,
+  create_in_closed_folder = false,
   open_on_setup = true,
   open_on_setup_file = true,
   focus_empty_on_setup = true,

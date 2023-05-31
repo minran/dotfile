@@ -2,14 +2,19 @@
 local cmp = require("cmp")
 local lspkind = require("lspkind")
 
+vim.g.UltiSnipsSnippetDirectories = {'UltiSnips', 'my_snippets'}
+
 cmp.setup {
   snippet = {
     expand = function(args)
       -- For `ultisnips` user.
       vim.fn["UltiSnips#Anon"](args.body)
     end,
+    sources = {
+      { name = "ultisnips" },
+      -- more sources
+    },
   },
-  
   window = {
     completion = cmp.config.window.bordered(),
     documentation = cmp.config.window.bordered(),

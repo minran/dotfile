@@ -69,3 +69,4 @@ vim.o.swapfile = false
 
 -- 相对数字
 vim.o.relativenumber = true;
+
