@@ -112,4 +112,9 @@ return require('packer').startup(function(use)
     -- tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
   }
 
+  -- css color
+  use {
+    'norcalli/nvim-colorizer.lua'
+  }
+
 end)

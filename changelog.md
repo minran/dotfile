@@ -1,3 +1,6 @@
+### 2023-06-12 一 12:05:14
+- 增加 nvim-colorizer 插件
+
 ### 2023-05-31 三 11:42:38  
 - 能加 my_snippets cpp.snippets
 - bits/stdc++.h macos 不存在解决方案 https://www.cnblogs.com/lipoicyclic/p/14623307.html

@@ -169,4 +169,8 @@ require("lazy").setup({
     'xeluxee/competitest.nvim',
     dependencies = 'MunifTanjim/nui.nvim',
   },
+  ------------------ css color -----------------
+  {
+    'norcalli/nvim-colorizer.lua'
+  },
 })
