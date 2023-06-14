@@ -1,4 +1,13 @@
-require('competitest').setup() 
+require('competitest').setup({
+  compile_command = {
+    cpp       = { exec = 'g++',           args = {'-std=c++20', '$(FNAME)', '-o', '$(FNOEXT)'} },
+    some_lang = { exec = 'some_compiler', args = {'$(FNAME)'} },
+  },
+  run_command = {
+    cpp       = { exec = './$(FNOEXT)' },
+    some_lang = { exec = 'some_interpreter', args = {'$(FNAME)'} },
+  },
+}) 
 
 local keymap = vim.keymap
 local opts = { noremap=true, silent=true }
