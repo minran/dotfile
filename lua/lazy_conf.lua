@@ -173,4 +173,7 @@ require("lazy").setup({
   {
     'norcalli/nvim-colorizer.lua'
   },
+
+  ------------------ 缩进线 -----------------
+  { "lukas-reineke/indent-blankline.nvim" },
 })
