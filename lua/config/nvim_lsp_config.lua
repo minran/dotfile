@@ -3,6 +3,7 @@
 local lspconfig = require('lspconfig')
 local opts = { noremap=true, silent=true }
 local keymap = vim.keymap
+require("lsp-format").setup {}
 vim.lsp.set_log_level("trace")
 keymap.set('n', '<space>e', vim.diagnostic.open_float, opts)
 keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
@@ -11,6 +12,7 @@ keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts)
 
 -- Use an on_attach function to only map the following keys after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
+  require("lsp-format").on_attach(client)
   -- Enable completion triggered by <c-x><c-o>
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
   -- Mappings.
@@ -32,7 +34,6 @@ local on_attach = function(client, bufnr)
   keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
   keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
 end
-
 
 local lsp_flags = {
   -- This is the default in Nvim 0.7+

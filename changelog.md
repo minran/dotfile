@@ -1,3 +1,7 @@
+### 2023-07-12 三 10:50:52 
+- 增加lsp-format 插件
+- 增加markdown-preview 插件
+
 ### 2023-06-21 一 14:30:00
 - 增加indent-blankline 插件
 

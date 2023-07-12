@@ -176,4 +176,14 @@ require("lazy").setup({
 
   ------------------ 缩进线 -----------------
   { "lukas-reineke/indent-blankline.nvim" },
+
+  ------------------ markdonw预览 -----------------
+  {
+    "iamcco/markdown-preview.nvim",
+    config = function()
+      vim.fn["mkdp#util#install"]()
+    end,
+  },
+  ------------------ lsp-format -----------------
+  { "lukas-reineke/lsp-format.nvim" },
 })

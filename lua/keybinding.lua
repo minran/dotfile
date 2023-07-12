@@ -73,3 +73,8 @@ vim.keymap.set('n', '<Leader>z', '<Plug>(FerretAckWord)', {})
 
 -- symbols_outline
 map('n', '<leader>tt', ':SymbolsOutline<CR>', opt)
+
+-- markdown-preview
+map("n", '<Leader>mp', '<Plug>MarkdownPreview', opt)
+map("n", '<Leader>ms', '<Plug>MarkdownPreviewStop', opt)
+map("n", '<Leader>mt', '<Plug>MarkdownPreviewToggle', opt)
