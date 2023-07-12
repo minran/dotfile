@@ -1,7 +1,7 @@
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 local lspconfig = require('lspconfig')
-local opts = { noremap=true, silent=true }
+local opts = { noremap = true, silent = true }
 local keymap = vim.keymap
 require("lsp-format").setup {}
 vim.lsp.set_log_level("trace")
@@ -17,7 +17,7 @@ local on_attach = function(client, bufnr)
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
   -- Mappings.
   -- See `:help vim.lsp.*` for documentation on any of the below functions
-  local bufopts = { noremap=true, silent=true, buffer=bufnr }
+  local bufopts = { noremap = true, silent = true, buffer = bufnr }
   keymap.set("n", "gd", vim.lsp.buf.definition, bufopts)
   keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
   keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
@@ -57,7 +57,6 @@ lspconfig['yamlls'].setup {
 
 lspconfig['lua_ls'].setup({
   on_attach = on_attach,
-  capabilities = capabilities,
   settings = {
     Lua = {
       diagnostics = {
@@ -72,11 +71,6 @@ lspconfig['lua_ls'].setup({
   },
 })
 
---[[require('lspconfig')['sumneko_lua'].setup {]]
-  --[[on_attach = on_attach,]]
-  --[[flags = lsp_flags,]]
---[[}]]
-
 lspconfig['volar'].setup {
   on_attach = on_attach,
   flags = lsp_flags,
@@ -87,31 +81,3 @@ lspconfig['tsserver'].setup {
   filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
   cmd = { "typescript-language-server", "--stdio" },
 }
-
---[[require('lspconfig')['rust_analyzer'].setup {]]
-    --[[-- on_attach = on_attach,]]
-    --[[-- flags = lsp_flags,]]
-    --[[-- Server-specific settings...]]
-    --[[settings = {]]
-      --[[["rust-analyzer"] = {]]
-        --[[imports = {]]
-            --[[granularity = {]]
-                --[[group = "module",]]
-            --[[},]]
-            --[[prefix = "self",]]
-        --[[},]]
-        --[[cargo = {]]
-            --[[buildScripts = {]]
-                --[[enable = true,]]
-            --[[},]]
-        --[[},]]
-        --[[procMacro = {]]
-            --[[enable = true]]
-        --[[},]]
-        --[[checkOnSave = {]]
-          --[[command = "clippy",]]
-        --[[},]]
-      --[[}]]
-    --[[}]]
---[[}]]
-
