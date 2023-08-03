@@ -1,3 +1,6 @@
+### 2023-08-03 四 15:13:02  
+- lsp-config volar tsserver config
+
 ### 2023-07-12 三 10:50:52 
 - 增加lsp-format 插件
 - 增加markdown-preview 插件

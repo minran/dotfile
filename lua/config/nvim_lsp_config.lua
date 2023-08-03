@@ -72,6 +72,12 @@ lspconfig['lua_ls'].setup({
 })
 
 lspconfig['volar'].setup {
+  filetypes = {'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue',},
+  init_options = {
+    typescript = {
+      tsdk = '/usr/local/lib/node_modules/typescript/lib'
+    }
+  },
   on_attach = on_attach,
   flags = lsp_flags,
 }
