@@ -212,14 +212,14 @@ nvim_tree.setup({
   update_cwd = false,
   -- new
   create_in_closed_folder = false,
-  open_on_setup = true,
-  open_on_setup_file = true,
-  focus_empty_on_setup = true,
+  -- open_on_setup = true,
+  -- open_on_setup_file = true,
+  -- focus_empty_on_setup = true,
   sync_root_with_cwd = true,
 
   view = {
     width = 30,
-    hide_root_folder = false,
+    -- hide_root_folder = false,
     side = "left",
     preserve_window_proportions = false,
     number = false,
