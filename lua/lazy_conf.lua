@@ -56,7 +56,7 @@ require("lazy").setup({
 
   ------------------ telescope -----------------
   {
-    'nvim-telescope/telescope.nvim', version = '0.1.0',
+    'nvim-telescope/telescope.nvim', tag = '0.1.4',
     -- or                            , branch = '0.1.x',
   },
   { "nvim-telescope/telescope-live-grep-args.nvim", },
@@ -186,4 +186,7 @@ require("lazy").setup({
   },
   ------------------ lsp-format -----------------
   { "lukas-reineke/lsp-format.nvim" },
+
+  { "JoosepAlviste/nvim-ts-context-commentstring", commit = "6c30f3c8915d7b31c3decdfe6c7672432da1809d" },
+
 })

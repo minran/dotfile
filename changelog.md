@@ -1,3 +1,7 @@
+### 2023-12-04 一17:31:24  
+- add { "JoosepAlviste/nvim-ts-context-commentstring", commit = "6c30f3c8915d7b31c3decdfe6c7672432da1809d" },
+- python3 3.12.0 error pip install 'pynvim @ git+https://github.com/neovim/pynvim'
+
 ### 2023-08-03 四 15:13:02  
 - lsp-config volar tsserver config
 

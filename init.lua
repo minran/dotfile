@@ -4,9 +4,9 @@ require("plugin_config")
 --require("plugins")
 
 vim.o.termguicolors = true
---vim.cmd [[colorscheme vscode]]
+vim.cmd [[colorscheme vscode]]
 --vim.cmd[[colorscheme onelight]]
-vim.cmd[[colorscheme tokyonight]]
+--vim.cmd[[colorscheme tokyonight]]
 --vim.cmd[[colorscheme monokai]]
 -- vim.cmd[[colorscheme sonokai]]
 
@@ -18,7 +18,7 @@ local set = vim.opt
 set.hidden = true
 set.number = true
 set.encoding = "UTF-8"
-
+--
 -- if macunix{
 -- 开始折叠
 set.foldenable = true;
@@ -41,8 +41,8 @@ set.hlsearch = true   -- 搜索时高亮显示被找到的文本
 --set.showmatch = true
 set.cursorline = true -- 高亮当前行
 
-set.background="dark" -- 黑色
--- set.background = "light" -- 白色
+--set.background="dark" -- 黑色
+set.background = "light" -- 白色
 
 -- 缩进2个空格等于一个Tab
 vim.o.tabstop = 2
@@ -69,3 +69,4 @@ vim.o.swapfile = false
 
 -- 相对数字
 vim.o.relativenumber = true;
+
