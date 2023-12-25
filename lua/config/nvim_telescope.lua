@@ -31,8 +31,11 @@ telescope.setup({
     -- 打开弹窗后进入的初始模式，默认为 insert，也可以是 normal
     initial_mode = "insert",
 
-    layout_config = { width = 0.98, 
-    preview_cutoff = 1
+    layout_config = {
+      center = {
+        width = 0.98, 
+        preview_cutoff = 1
+      }
     },
     -- vertical , center , cursor
     --layout_strategy = "horizontal",
