@@ -60,6 +60,11 @@ lspconfig['tailwindcss'].setup {
   flags = lsp_flags,
 }
 
+lspconfig['cssls'].setup {
+  on_attach = on_attach,
+  flags = lsp_flags,
+}
+
 lspconfig['lua_ls'].setup({
   on_attach = on_attach,
   settings = {
@@ -89,6 +94,11 @@ lspconfig['volar'].setup {
 
 lspconfig['tsserver'].setup {
   on_attach = on_attach,
-  filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
+  filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx", 'vue' },
   cmd = { "typescript-language-server", "--stdio" },
+}
+
+lspconfig['eslint'].setup {
+  on_attach = on_attach,
+  filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx", 'vue' },
 }
