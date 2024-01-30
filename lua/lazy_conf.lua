@@ -92,8 +92,7 @@ require("lazy").setup({
   {'mfussenegger/nvim-dap'},
   ------------------ nvim-tree -----------------
   {
-    'nvim-tree/nvim-tree.lua',
-    version = 'nightly' -- optional, updated every week. (see issue #1193)
+    'nvim-tree/nvim-tree.lua'
   },
   ------------------ Snippet engine and snippet template -----------------
   { "SirVer/ultisnips" },

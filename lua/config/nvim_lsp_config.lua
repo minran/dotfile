@@ -55,11 +55,6 @@ lspconfig['yamlls'].setup {
   flags = lsp_flags,
 }
 
-lspconfig['tailwindcss'].setup {
-  on_attach = on_attach,
-  flags = lsp_flags,
-}
-
 lspconfig['cssls'].setup {
   on_attach = on_attach,
   flags = lsp_flags,
@@ -82,7 +77,7 @@ lspconfig['lua_ls'].setup({
 })
 
 lspconfig['volar'].setup {
-  filetypes = {'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue',},
+  filetypes = {'vue'},
   init_options = {
     typescript = {
       tsdk = '/usr/local/lib/node_modules/typescript/lib'
@@ -99,6 +94,10 @@ lspconfig['tsserver'].setup {
 }
 
 lspconfig['eslint'].setup {
-  on_attach = on_attach,
-  filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx", 'vue' },
+  on_attach = function(client, bufnr)
+    vim.api.nvim_create_autocmd("BufWritePre", {
+      buffer = bufnr,
+      command = "EslintFixAll",
+    })
+  end,
 }
