@@ -68,5 +68,7 @@ vim.o.writebackup = false
 vim.o.swapfile = false
 
 -- 相对数字
-vim.o.relativenumber = true;
+vim.o.relativenumber = true
+
+vim.opt.wrap = true
 
