@@ -60,8 +60,10 @@ local config = {
     component_separators = '',
     section_separators = '',
     --theme = 'onelight', 
-    theme = 'tokyonight', 
-    --theme = 'vscode'
+    --theme = 'tokyonight', 
+    --theme = 'dracula-nvim', 
+    theme = 'vscode'
+    --theme = 'monokai'
     --theme = {
       -- We are going to use lualine_c an lualine_x as left and
       -- right section. Both are highlighted by c theme .  So we

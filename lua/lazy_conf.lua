@@ -53,6 +53,9 @@ require("lazy").setup({
   {
     'Mofiqul/vscode.nvim'
   },
+  {
+    'Mofiqul/dracula.nvim'
+  },
 
   ------------------ telescope -----------------
   {
