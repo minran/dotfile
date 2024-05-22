@@ -265,7 +265,7 @@ nvim_tree.setup({
   filters = {
     dotfiles = false,
     custom = {},
-    exclude = { "node_modules" },
+    exclude = { "node_modules", "dist" },
   },
   git = {
     enable = true,
