@@ -59,11 +59,12 @@ local config = {
     -- Disable sections and component separators
     component_separators = '',
     section_separators = '',
+    theme = 'citruszest',
     --theme = 'onelight', 
     --theme = 'tokyonight', 
     --theme = 'dracula-nvim', 
-    theme = 'vscode'
-    --theme = 'monokai'
+    -- theme = 'vscode',
+    --theme = 'monokai',
     --theme = {
       -- We are going to use lualine_c an lualine_x as left and
       -- right section. Both are highlighted by c theme .  So we
