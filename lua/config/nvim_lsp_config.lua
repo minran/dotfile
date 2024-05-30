@@ -98,6 +98,7 @@ lspconfig['tsserver'].setup {
 }
 
 lspconfig['eslint'].setup {
+  autostart = false,
   on_attach = function(client, bufnr)
     vim.api.nvim_create_autocmd("BufWritePre", {
       buffer = bufnr,
