@@ -79,8 +79,12 @@ lspconfig['lua_ls'].setup({
 lspconfig['volar'].setup {
   filetypes = {'vue'},
   init_options = {
+    vue = {
+      hybridMode = false,
+    },
     typescript = {
-      tsdk = '/usr/local/lib/node_modules/typescript/lib'
+      -- tsdk = '/usr/local/lib/node_modules/typescript/lib'
+      tsdk = vim.fn.getcwd() .. "/node_modules/typescript/lib",
     }
   },
   on_attach = on_attach,
