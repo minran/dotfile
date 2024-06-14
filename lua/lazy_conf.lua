@@ -206,7 +206,4 @@ require("lazy").setup({
   ------------------ hlargs.nvim -----------------
   { 'm-demare/hlargs.nvim' },
 
-  ------------------ trouble.nvim -----------------
-  { 'folke/trouble.nvim', dependencies = { "nvim-tree/nvim-web-devicons" }, },
-
 })
