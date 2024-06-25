@@ -205,5 +205,4 @@ require("lazy").setup({
 
   ------------------ hlargs.nvim -----------------
   { 'm-demare/hlargs.nvim' },
-
 })
