@@ -42,6 +42,11 @@ require("lazy").setup({
     'tanvirtin/monokai.nvim',
   },
   {
+    "polirritmico/monokai-nightasty.nvim",
+    lazy = false,
+    priority = 1000,
+  },
+  {
     'folke/tokyonight.nvim',
   },
   {

@@ -4,10 +4,11 @@ require("plugin_config")
 --require("plugins")
 
 vim.o.termguicolors = true
-vim.cmd [[colorscheme vscode]]
+-- vim.cmd [[colorscheme vscode]]
 --vim.cmd[[colorscheme onelight]]
 --vim.cmd[[colorscheme tokyonight]]
 -- vim.cmd[[colorscheme monokai]]
+vim.cmd[[colorscheme monokai-nightasty]]
 -- vim.cmd[[colorscheme sonokai]]
 --vim.cmd[[colorscheme dracula]]
 -- vim.cmd[[colorscheme citruszest]]
