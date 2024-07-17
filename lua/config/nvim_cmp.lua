@@ -61,6 +61,7 @@ cmp.setup {
       cmp.ItemField.Menu,
     },
     format = lspkind.cmp_format {
+      before = require("tailwind-tools.cmp").lspkind_format,
       mode = "symbol_text",
       menu = {
         nvim_lsp = "[LSP]",

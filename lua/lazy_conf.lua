@@ -96,6 +96,7 @@ require("lazy").setup({
     dependencies = { "nvim-treesitter/nvim-treesitter" },
   },
 
+
   {"williamboman/mason.nvim", run = ":MasonUpdate"},
   {"williamboman/mason-lspconfig.nvim"},
 
@@ -112,7 +113,13 @@ require("lazy").setup({
 
   { "onsails/lspkind-nvim" },
   ------------------ auto-completion engine -----------------
-  { "hrsh7th/nvim-cmp" },
+  {
+    "hrsh7th/nvim-cmp",
+    dependencies = {
+      "luckasRanarison/tailwind-tools.nvim",
+      "onsails/lspkind-nvim",
+    },
+  },
   ------------------ nvim-cmp completion sources -----------------
   { "hrsh7th/cmp-vsnip" },
   { "hrsh7th/cmp-nvim-lsp" },
@@ -124,7 +131,7 @@ require("lazy").setup({
 
   ------------------ lspkind icon -----------------
   {'mortepau/codicons.nvim'},
-  {'akinsho/bufferline.nvim', version = "v3.*", dependencies = 'nvim-tree/nvim-web-devicons'},
+  -- {'akinsho/bufferline.nvim', version = "v3.*", dependencies = 'nvim-tree/nvim-web-devicons'},
   {
     'nvim-lualine/lualine.nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons', opt = true }
@@ -210,4 +217,10 @@ require("lazy").setup({
 
   ------------------ hlargs.nvim -----------------
   { 'm-demare/hlargs.nvim' },
+  ------------------ tailwind-tools.nvim -----------------
+  {
+    "luckasRanarison/tailwind-tools.nvim",
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    opts = {} -- your configuration
+  },
 })
