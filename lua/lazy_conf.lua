@@ -78,7 +78,7 @@ require("lazy").setup({
   { "nvim-telescope/telescope-ui-select.nvim", },
   { "nvim-telescope/telescope-rg.nvim", },
   { "nvim-telescope/telescope-dap.nvim", },
-  {'neovim/nvim-lspconfig'},
+  { 'neovim/nvim-lspconfig' },
 
   ------------------ nvim-treesitter -----------------
   {
