@@ -63,9 +63,9 @@ local config = {
     --theme = 'onelight', 
     --theme = 'tokyonight', 
     --theme = 'dracula-nvim', 
-    -- theme = 'vscode',
+    theme = 'vscode',
     --theme = 'monokai',
-    theme = 'monokai-nightasty',
+    -- theme = 'monokai-nightasty',
     --theme = {
       -- We are going to use lualine_c an lualine_x as left and
       -- right section. Both are highlighted by c theme .  So we
