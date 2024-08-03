@@ -16,8 +16,9 @@ map("n", "<space>qq", ":qa<CR>", opt)
 
 -- bufferline
 -- 左右Tab切换
-map("n", "<space>h", ":BufferLineCyclePrev<CR>", opt)
-map("n", "<space>l", ":BufferLineCycleNext<CR>", opt)
+map("n", "<space>h", ":BufferPrevious<CR>", opt)
+map("n", "<space>l", ":BufferNext<CR>", opt)
+map("n", "<space>c", ":BufferClose<CR>", opt)
 -- "moll/vim-bbye" 关闭当前 buffer
 map("n", "<leader>bc", ":bdelete!<CR>", opt)
 --map("n", "<space>w", ":bdelete!<CR>", opt)
