@@ -3,14 +3,14 @@ require('keybinding')
 require("plugin_config")
 --require("plugins")
 
-vim.o.termguicolors = true
-vim.cmd [[colorscheme vscode]]
---vim.cmd[[colorscheme onelight]]
+--vim.cmd [[colorscheme catppuccin]]
+-- vim.cmd [[colorscheme vscode]]
+-- vim.cmd[[colorscheme onelight]]
 --vim.cmd[[colorscheme tokyonight]]
 --vim.cmd[[colorscheme monokai]]
 --vim.cmd[[colorscheme monokai-nightasty]]
---vim.cmd[[colorscheme sonokai]]
---vim.cmd[[colorscheme dracula]]
+vim.cmd[[colorscheme sonokai]]
+-- vim.cmd[[colorscheme dracula]]
 --vim.cmd[[colorscheme citruszest]]
 
 vim.cmd('syntax on')
@@ -44,7 +44,7 @@ set.hlsearch = true   -- 搜索时高亮显示被找到的文本
 --set.showmatch = true
 set.cursorline = true -- 高亮当前行
 
-set.background="dark" -- 黑色
+-- set.background="dark" -- 黑色
 -- set.background = "light" -- 白色
 
 -- 缩进2个空格等于一个Tab
@@ -74,4 +74,3 @@ vim.o.swapfile = false
 vim.o.relativenumber = true
 
 vim.opt.wrap = true
-

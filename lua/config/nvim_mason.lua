@@ -8,7 +8,7 @@ require("mason-lspconfig").setup({
     "lua_ls",
     "rust_analyzer",
     "volar",
-    "tsserver",
+    "ts_ls",
     "solidity",
     "eslint",
     "tailwindcss",

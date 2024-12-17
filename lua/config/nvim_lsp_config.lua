@@ -91,7 +91,7 @@ lspconfig['volar'].setup {
   flags = lsp_flags,
 }
 
-lspconfig['tsserver'].setup {
+lspconfig['ts_ls'].setup {
   on_attach = on_attach,
   filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
   cmd = { "typescript-language-server", "--stdio" },
