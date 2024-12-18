@@ -131,7 +131,7 @@ require("lazy").setup({
   { "hrsh7th/cmp-path" },
   { "hrsh7th/cmp-buffer" },
   { "hrsh7th/cmp-omni" },
-  { "quangnguyen30192/cmp-nvim-ultisnips" },
+  -- { "quangnguyen30192/cmp-nvim-ultisnips" },
   { "hrsh7th/cmp-emoji", enabled = vim.g.is_mac  },
 
   ------------------ lspkind icon -----------------
